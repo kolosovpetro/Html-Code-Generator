@@ -1,0 +1,26 @@
+﻿namespace HtmlGenerator.Abstractions.Interfaces
+{
+    public interface IEntity
+    {
+        /// <summary>
+        /// Root node of current node
+        /// </summary>
+        IEntity Parent { get; set; }
+        
+        /// <summary>
+        /// Name of directory
+        /// </summary>
+        string DirectoryName { get; set; }
+        
+        /// <summary>
+        /// Path of current node. Generally, it is Parent.Path + Directory
+        /// </summary>
+        string Path { get; set; }
+
+        /// <summary>
+        /// Generates new file at folder debug/Path + Directory/FileName;
+        /// Filename is to be constant index.htm
+        /// </summary>
+        void Commit();
+    }
+}

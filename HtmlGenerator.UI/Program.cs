@@ -13,10 +13,10 @@ namespace HtmlGenerator.UI
         {
             IEntity root = new MenuEntity(Path.Root, Titles.Title);
             IEntity algorithms = new MenuEntity(Path.ClassicAlgorithms, Titles.ClassicAlgorithms);
-            IEntity dataStructures = new MenuEntity(Path.DataStructures, Titles.DataStructures);
+            IEntity sieve = new PageEntity(Path.SieveOfEratosthenes, Titles.SieveOfEratosthenes, SnippetSource.SieveSource);
 
             root.AddChild(algorithms);
-            algorithms.AddChild(dataStructures);
+            algorithms.AddChild(sieve);
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

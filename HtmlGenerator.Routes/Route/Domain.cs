@@ -2,6 +2,6 @@
 {
     public static class Domain
     {
-        public const string MainDomain = "C:/Users/razumovskiy/RiderProjects/HtmlGenerator/RootFolder/";
+        public const string MainDomain = "https://kolosovpetro.github.io//HtmlGenerator/RootFolder/";
     }
 }

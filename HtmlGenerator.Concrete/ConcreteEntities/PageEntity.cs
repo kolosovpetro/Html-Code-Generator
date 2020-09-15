@@ -22,7 +22,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             SnippetPath = snippetPath;
             DirectoryName = directoryName;
             SubTitle = subTitle;
-            Title = Titles.Title + subTitle;
+            Title = Titles.MainTitle + subTitle;
         }
 
         public void AddChild(IEntity entity)

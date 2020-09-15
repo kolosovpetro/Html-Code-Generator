@@ -10,7 +10,7 @@ namespace HtmlGenerator.Presets.Presets
         public static IEnumerable<string> BodyStart(string subtitle)
         {
             yield return "<body class=\"compScience\">";
-            yield return $"<h1>{Titles.Title}</h1>";
+            yield return $"<h1>{Titles.MainTitle}</h1>";
             yield return $"<h2>{subtitle}</h2>";
         }
 

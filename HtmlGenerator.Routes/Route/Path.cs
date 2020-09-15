@@ -28,11 +28,29 @@
         public static class BtAlgorithms
         {
             public const string Root = "BinaryTreeAlgorithms/";
+            public const string PreOrderRecursive = "PreOrderTraversalRecursive/";
+            public const string InOrderRecursive = "InOrderTraversalRecursive/";
+            public const string OutOrderRecursive = "OutOrderTraversalRecursive/";
+            public const string PostOrderRecursive = "PostOrderTraversalRecursive/";
+            public const string PreOrderIterative = "PreOrderTraversalIterative/";
+            public const string InOrderIterative = "InOrderTraversalIterative/";
+            public const string OutOrderIterative = "OutOrderTraversalIterative/";
+            public const string PostOrderIterative = "PostOrderTraversalIterative/";
+            public const string Height = "Height/";
+            public const string Depth = "Depth/";
         }
 
         public static class BstAlgorithms
         {
             public const string Root = "BinarySearchTreeAlgorithms/";
+            public const string Insert = "Insert/";
+            public const string Search = "Search/";
+            public const string Delete = "Delete/";
+            public const string Max = "Max/";
+            public const string Min = "Min/";
+            public const string Successor = "Successor/";
+            public const string Predecessor = "Predecessor/";
+            public const string Transplant = "Transplant/";
         }
 
         public static class TreeAlgorithms
@@ -64,6 +82,9 @@
         public static class SearchAlgorithms
         {
             public const string Root = "SearchAlgorithms/";
+            public const string SimpleLinearSearch = "SimpleLinearSearch/";
+            public const string ImproveLinearSearch = "ImprovedLinearSearch/";
+            public const string ImproveLinearSearchWithSentinel = "ImprovedLinearSearchWithSentinel/";
         }
     }
 }

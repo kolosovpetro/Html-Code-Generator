@@ -1,6 +1,6 @@
 ﻿namespace HtmlGenerator.Routes.Routes
 {
-    public static class Route
+    public static class Path
     {
         public const string Root = "../../../RootFolder/";
         public const string ClassicAlgorithms = "ClassicAlgorithms/";

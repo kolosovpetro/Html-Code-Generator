@@ -5,8 +5,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Queues" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\HtmlGenerator.Abstractions\HtmlGenerator.Abstractions.csproj" />
-      <ProjectReference Include="..\HtmlGenerator.CodeQueues\HtmlGenerator.CodeQueues.csproj" />
+      <ProjectReference Include="..\HtmlGenerator.Presets\HtmlGenerator.Presets.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace HtmlGenerator.Routes.Route
 {
-    public class Subject
+    public static class Titles
     {
         public const string Title = "Algorithms and Data Structures in C#";
         public const string ClassicAlgorithms = "Classic Algorithms";

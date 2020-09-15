@@ -8,7 +8,7 @@ namespace HtmlGenerator.Abstractions.Interfaces
         /// Root node of current node
         /// </summary>
         IEntity Parent { get; set; }
-        
+
         List<IEntity> ChildObjects { get; }
         
         /// <summary>
@@ -25,6 +25,16 @@ namespace HtmlGenerator.Abstractions.Interfaces
         /// Path of current node. Generally, it is Parent.Path + Directory
         /// </summary>
         string Path { get; set; }
+        
+        /// <summary>
+        /// Title h1.
+        /// </summary>
+        string Title { get; set; }
+        
+        /// <summary>
+        /// Title h2.
+        /// </summary>
+        string SubTitle { get; set; }
 
         void AddChild(IEntity entity);
 

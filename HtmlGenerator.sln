@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlGenerator.Services", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlGenerator.Presets", "HtmlGenerator.Presets\HtmlGenerator.Presets.csproj", "{862A3974-A53B-4D46-A592-A02D81B306DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlGenerator.CodeQueues", "HtmlGenerator.CodeQueues\HtmlGenerator.CodeQueues.csproj", "{FBC11344-4078-48D3-B4CA-FC9CE6C5353C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{862A3974-A53B-4D46-A592-A02D81B306DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{862A3974-A53B-4D46-A592-A02D81B306DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{862A3974-A53B-4D46-A592-A02D81B306DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC11344-4078-48D3-B4CA-FC9CE6C5353C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC11344-4078-48D3-B4CA-FC9CE6C5353C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC11344-4078-48D3-B4CA-FC9CE6C5353C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC11344-4078-48D3-B4CA-FC9CE6C5353C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

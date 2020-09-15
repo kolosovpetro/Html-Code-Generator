@@ -1,6 +1,7 @@
 ﻿using System;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
+using HtmlGenerator.Routes.Route;
 using Path = HtmlGenerator.Routes.Route.Path;
 
 namespace HtmlGenerator.UI
@@ -9,9 +10,9 @@ namespace HtmlGenerator.UI
     {
         private static void Main()
         {
-            IEntity root = new MenuEntity(Path.Root);
-            IEntity algorithms = new MenuEntity(Path.ClassicAlgorithms);
-            IEntity dataStructures = new MenuEntity(Path.DataStructures);
+            IEntity root = new MenuEntity(Path.Root, Titles.Title);
+            IEntity algorithms = new MenuEntity(Path.ClassicAlgorithms, Titles.ClassicAlgorithms);
+            IEntity dataStructures = new MenuEntity(Path.DataStructures, Titles.DataStructures);
 
             root.AddChild(algorithms);
             algorithms.AddChild(dataStructures);

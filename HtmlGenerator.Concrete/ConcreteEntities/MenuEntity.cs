@@ -25,11 +25,11 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             Path = Parent?.Path + directoryName;
         }
 
-        public MenuEntity(string directoryName, string title, string subTitle)
+        public MenuEntity(string directoryName, string subTitle)
         {
             DirectoryName = directoryName;
-            Title = title;
             SubTitle = subTitle;
+            Path = Parent?.Path + directoryName;
         }
 
         public void AddChild(IEntity entity)

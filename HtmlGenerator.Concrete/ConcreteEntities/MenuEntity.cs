@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
+using HtmlGenerator.Services.Concrete;
 
 namespace HtmlGenerator.Concrete.ConcreteEntities
 {
@@ -27,10 +28,9 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             entity.Path = Path + entity.DirectoryName;
         }
         
-        
         public void Commit()
         {
-            throw new System.NotImplementedException();
+            ConcreteService.CreateFolders(this);
         }
     }
 }

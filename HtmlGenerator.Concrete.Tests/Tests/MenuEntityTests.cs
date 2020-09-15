@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
-using HtmlGenerator.Routes.Routes;
+using HtmlGenerator.Routes.Route;
 using NUnit.Framework;
 
 namespace HtmlGenerator.Concrete.Tests.Tests

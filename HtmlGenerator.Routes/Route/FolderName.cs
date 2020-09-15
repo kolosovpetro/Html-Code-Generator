@@ -1,4 +1,4 @@
-﻿namespace HtmlGenerator.Routes.Routes
+﻿namespace HtmlGenerator.Routes.Route
 {
     public class FolderName
     {

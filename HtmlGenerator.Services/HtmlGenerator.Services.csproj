@@ -6,7 +6,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\HtmlGenerator.Abstractions\HtmlGenerator.Abstractions.csproj" />
-      <ProjectReference Include="..\HtmlGenerator.Services\HtmlGenerator.Services.csproj" />
     </ItemGroup>
 
 </Project>

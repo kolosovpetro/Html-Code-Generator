@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Presets.Presets
 {
@@ -15,10 +16,11 @@ namespace HtmlGenerator.Presets.Presets
             yield return "<meta name=\"author\" content=\"Petro Kolosov\">";
             yield return "<meta name=\"keywords\" content=\"Data structures, Algorithms\">";
             yield return "<meta name=\"revisit-after\" content=\"3 days\">";
-            yield return "<link rel=\"icon\" type=\"image/png\" href=\"css/favicon-16x16.png\" sizes=\"16x16\" />";
-            yield return "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"css/compScience.css\">";
-            yield return "<link rel=\"stylesheet\" href=\"code_highlight_css/styles/darcula.css\">";
-            yield return "<script src=\"code_highlight_css/highlight.pack.js\"></script>";
+            yield return $"<link rel=\"icon\" type=\"image/png\" href=\"css/favicon-16x16.png\" sizes=\"16x16\" />";
+            yield return
+                $"<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"{Domain.MainDomain}css/compScience.css\">";
+            yield return $"<link rel=\"stylesheet\" href=\"{Domain.MainDomain}code_highlight_css/styles/darcula.css\">";
+            yield return $"<script src=\"{Domain.MainDomain}code_highlight_css/highlight.pack.js\"></script>";
             yield return "<script>hljs.initHighlightingOnLoad();</script>";
             yield return "</head>";
         }

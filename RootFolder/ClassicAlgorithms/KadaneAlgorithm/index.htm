@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Classic Algorithms</title>
+<title>Algorithms and Data Structures in C#Kadane's Algorithm</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,13 +16,30 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Classic Algorithms</h2>
+<h2>Kadane's Algorithm</h2>
 <ul>
-<li><a href="SieveOfEratosthenes//index.htm">SieveOfEratosthenes/</li>
-<li><a href="EuclideanGcd//index.htm">EuclideanGcd/</li>
-<li><a href="KadaneAlgorithm//index.htm">KadaneAlgorithm/</li>
-<li><a href="MaximumSubarraySum//index.htm">MaximumSubarraySum/</li>
-<li><a href="ShuntingYardAlgorithhm//index.htm">ShuntingYardAlgorithhm/</li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public static int KadaneAlgorithm(int[] a)
+{
+    int max = int.MinValue, currentMax = 0; 
+  
+    foreach (var item in a)
+    {
+        currentMax += item; 
+              
+        if (max < currentMax) 
+            max = currentMax; 
+              
+        if (currentMax < 0) 
+            currentMax = 0;
+    } 
+          
+    return max; 
+}
+</code></pre>
+</div>
 </body>
 </html>

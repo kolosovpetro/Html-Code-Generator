@@ -17,6 +17,11 @@ namespace HtmlGenerator.Abstractions.Interfaces
         string DirectoryName { get; set; }
         
         /// <summary>
+        /// Name of file
+        /// </summary>
+        string FileName { get; set; }
+        
+        /// <summary>
         /// Path of current node. Generally, it is Parent.Path + Directory
         /// </summary>
         string Path { get; set; }

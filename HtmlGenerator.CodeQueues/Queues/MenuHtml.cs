@@ -11,7 +11,7 @@ namespace HtmlGenerator.CodeQueues.Queues
         {
             var queue = new Queue<string>();
             queue.Enqueue("<html>");
-            Head.GetHead().ToList().ForEach(queue.Enqueue);
+            Head.GetHead(entity.Title).ToList().ForEach(queue.Enqueue);
             Body.BodyStart(entity.SubTitle).ToList().ForEach(queue.Enqueue);
             queue.Enqueue("<ul>");
             Body.GenerateLinks(entity).ToList().ForEach(queue.Enqueue);

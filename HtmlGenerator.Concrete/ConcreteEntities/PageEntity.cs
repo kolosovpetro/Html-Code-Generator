@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
+using HtmlGenerator.Services.Folder;
+using HtmlGenerator.Services.Writer;
 
 namespace HtmlGenerator.Concrete.ConcreteEntities
 {
     public class PageEntity : IEntity
     {
+        private string SnippetPath { get; }
         public IEntity Parent { get; set; }
         public List<IEntity> ChildObjects { get; } = new List<IEntity>();
         public string DirectoryName { get; set; }
@@ -12,6 +15,8 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         public string Path { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
+        
+        
 
         public void AddChild(IEntity entity)
         {
@@ -20,7 +25,8 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
 
         public void Commit()
         {
-            throw new System.NotImplementedException();
+            FolderService.Create(Path);
+            WriterService.CreatePageItem(this, "snippetpath");
         }
     }
 }

@@ -5,12 +5,12 @@ namespace HtmlGenerator.Presets.Presets
 {
     public static class Head
     {
-        public static IEnumerable<string> GetHead()
+        public static IEnumerable<string> GetHead(string title)
         {
             yield return "<head>";
             yield return "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">";
             yield return "<meta charset=\"utf-8\">";
-            yield return $"<title>{Titles.Title}</title>";
+            yield return $"<title>{title}</title>";
             yield return "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
             yield return "<meta name=\"description\" content=\"Algorithms and Data Structures in C#\">";
             yield return "<meta name=\"author\" content=\"Petro Kolosov\">";

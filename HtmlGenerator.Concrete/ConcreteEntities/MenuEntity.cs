@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
+using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using HtmlGenerator.Services.Folder;
 using HtmlGenerator.Services.Writer;
@@ -27,6 +28,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         {
             DirectoryName = directoryName;
             SubTitle = subTitle;
+            Title = Titles.Title + subTitle;
             Path = Parent?.Path + directoryName;
         }
 

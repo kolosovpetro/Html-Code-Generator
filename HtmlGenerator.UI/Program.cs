@@ -2,6 +2,7 @@
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
 using HtmlGenerator.Routes.Route;
+using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
 
 namespace HtmlGenerator.UI
@@ -16,7 +17,7 @@ namespace HtmlGenerator.UI
 
             root.AddChild(algorithms);
             algorithms.AddChild(dataStructures);
-            root.Commit();
+            ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }
     }

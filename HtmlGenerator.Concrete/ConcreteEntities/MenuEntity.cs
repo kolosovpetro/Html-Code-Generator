@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Services.Concrete;
+using HtmlGenerator.Services.Folder;
+using HtmlGenerator.Services.Writer;
 
 namespace HtmlGenerator.Concrete.ConcreteEntities
 {
@@ -14,10 +16,6 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         public string Path { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
-
-        public MenuEntity()
-        {
-        }
 
         public MenuEntity(string directoryName)
         {
@@ -41,8 +39,8 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
 
         public void Commit()
         {
-            ConcreteService.CreateFolders(this);
-            ConcreteService.CreateFiles(this);
+            FolderService.Create(Path);
+            WriterService.CreateMenuItem(this);
         }
     }
 }

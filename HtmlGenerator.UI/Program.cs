@@ -18,25 +18,25 @@ namespace HtmlGenerator.UI
             root.AddChild(algorithms);
 
             IEntity sieve = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes, Titles.SieveOfEratosthenes,
-                Snippet.SieveSource);
+                Snippet.ClassicalAlgorithms.SieveSource);
             algorithms.AddChild(sieve);
 
             IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd, Titles.EuclideanGcd,
-                Snippet.EuclideanGcd);
+                Snippet.ClassicalAlgorithms.EuclideanGcd);
             algorithms.AddChild(euclideanGcd);
 
             IEntity kadaneAlgorithm =
                 new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithms, Titles.KadaneAlgorithm,
-                    Snippet.KadaneAlgorithm);
+                    Snippet.ClassicalAlgorithms.KadaneAlgorithm);
             algorithms.AddChild(kadaneAlgorithm);
 
             IEntity maximumSubarraySum = new PageEntity(Path.ClassicalAlgorithms.MaximumSubarraySum,
                 Titles.MaximumSubarraySum,
-                Snippet.MaximumSubarraySum);
+                Snippet.ClassicalAlgorithms.MaximumSubarraySum);
             algorithms.AddChild(maximumSubarraySum);
 
             IEntity shuntingYard = new PageEntity(Path.ClassicalAlgorithms.ShuntingYard, Titles.ShuntingYard,
-                Snippet.ShuntingYard);
+                Snippet.ClassicalAlgorithms.ShuntingYard);
             algorithms.AddChild(shuntingYard);
 
             ConcreteService.CreateFiles(root);

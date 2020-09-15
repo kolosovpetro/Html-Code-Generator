@@ -3,7 +3,7 @@
     public static class Path
     {
         public const string MainRoot = "../../../../RootFolder/";
-        
+
         public static class ClassicalAlgorithms
         {
             public const string Root = "ClassicAlgorithms/";
@@ -24,36 +24,35 @@
         {
             public const string Root = "HeapAlgorithms/";
         }
-        
+
         public static class BtAlgorithms
         {
             public const string Root = "BinaryTreeAlgorithms/";
         }
-        
+
         public static class BstAlgorithms
         {
             public const string Root = "BinarySearchTreeAlgorithms/";
         }
-        
+
         public static class TreeAlgorithms
         {
             public const string Root = "TreeAlgorithms/";
         }
-        
+
         public static class GraphAlgorithms
         {
             public const string Root = "GraphAlgorithms/";
         }
-        
+
         public static class SortAlgorithms
         {
             public const string Root = "SortAlgorithms/";
         }
-        
+
         public static class SearchAlgorithms
         {
             public const string Root = "SearchAlgorithms/";
         }
-        
     }
 }

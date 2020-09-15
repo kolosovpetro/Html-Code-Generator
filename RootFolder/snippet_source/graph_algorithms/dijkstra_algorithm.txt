@@ -1,0 +1,44 @@
+public static List<DistanceModel<T>> DijkstraMethod(IGraph<T> graph, IVertex<T> start)
+{
+    if (!graph.ContainsVertex(start))
+        throw new InvalidOperationException("Vertex does not belong to graph");
+
+    var list = new List<DistanceModel<T>> {new DistanceModel<T>(start, start, 0)};
+    var currentVertex = start;
+    var iterator = 0;
+
+    while (graph.UnvisitedVertices().Any())
+    {
+        currentVertex.Visit();
+
+        var edgesToAdjacentUnvisitedVertices = graph
+                .EdgesToAdjacentUnvisitedVertices(currentVertex);
+
+        foreach (var edge in edgesToAdjacentUnvisitedVertices)
+        {
+            if (ContainsAndGreater(list, edge.EndVertex, iterator + edge.Weight))
+            {
+                var distance = GetDistanceModelByEndVertex(list, edge.EndVertex);
+                distance.Distance = iterator + edge.Weight;
+                distance.PreviousVertex = currentVertex;
+                continue;
+            }
+
+            if (!Contains(list, edge.EndVertex))
+                list.Add(new DistanceModel<T>
+                {
+                    Vertex = edge.EndVertex,
+                    PreviousVertex = currentVertex,
+                    Distance = iterator + edge.Weight,
+                });
+        }
+
+        if (!edgesToAdjacentUnvisitedVertices.Any()) break;
+
+        var minEdge = GetMinEdge(edgesToAdjacentUnvisitedVertices);
+        iterator += minEdge.Weight;
+        currentVertex = minEdge.EndVertex;
+    }
+
+    return list;
+}

@@ -1,0 +1,14 @@
+public static void DepthFirstSearchIterative(IGraph<T> graph, IVertex<T> startVertex)
+{
+    if (!graph.ContainsVertex(startVertex))
+        throw new InvalidOperationException("Vertex does not belong to graph.");
+
+    if (startVertex.IsVisited) return;
+            
+    startVertex.Visit();
+    Console.WriteLine(startVertex);
+            
+    var unvisitedVertices = startVertex.AdjacentUnvisitedVertices();
+    foreach (var vertex in unvisitedVertices) 
+        DepthFirstSearchIterative(graph, vertex);
+}

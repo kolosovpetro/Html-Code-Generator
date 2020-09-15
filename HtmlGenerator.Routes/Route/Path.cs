@@ -43,6 +43,11 @@
         public static class GraphAlgorithms
         {
             public const string Root = "GraphAlgorithms/";
+            public const string DijkstraAlgorithm = "DijkstraAlgorithm/";
+            public const string BreadthFirst = "BreadthFirstGraphTraversal/";
+            public const string DepthFirstIterative = "DepthFirstGraphTraversalIterative/";
+            public const string DepthFirstRecursive = "DepthFirstGraphTraversalRecursive/";
+            public const string KahnAlgorithm = "KahnAlgorithm/";
         }
 
         public static class SortAlgorithms

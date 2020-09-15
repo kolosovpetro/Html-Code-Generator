@@ -3,7 +3,7 @@
     public static class Titles
     {
         public const string MainTitle = "Algorithms and Data Structures in C#";
-        
+
         public static class ClassicalAlgorithms
         {
             public const string Root = "Classical Algorithms";
@@ -23,16 +23,40 @@
         public static class HeapAlgorithms
         {
             public const string RootTitle = "Heap Algorithms";
+            public const string HeapPush = "Heap Push";
+            public const string HeapPop = "Heap Pop";
+            public const string HeapCalculateUp = "Heap Calculate Up";
+            public const string HeapCalculateDown = "Heap Calculate Down";
+            public const string FloydAlgorithm = "Floyd Heapify";
+            public const string HeapSort = "Heap Sort";
         }
 
         public static class BtAlgorithms
         {
             public const string RootTitle = "Binary Tree Algorithms";
+            public const string PreOrderRecursive = "Pre-Order Traversal Recursive";
+            public const string InOrderRecursive = "In-Order Traversal Recursive";
+            public const string OutOrderRecursive = "Out-Order Traversal Recursive";
+            public const string PostOrderRecursive = "Post-Order Traversal Recursive";
+            public const string PreOrderIterative = "Pre-Order Traversal Iterative";
+            public const string InOrderIterative = "In-Order Traversal Iterative";
+            public const string OutOrderIterative = "Out-Order Traversal Iterative";
+            public const string PostOrderIterative = "Post-Order Traversal Iterative";
+            public const string Height = "Height";
+            public const string Depth = "Depth";
         }
 
         public static class BstAlgorithms
         {
             public const string Root = "Binary Search Tree Algorithms";
+            public const string Insert = "BST Insert";
+            public const string Search = "BST Search";
+            public const string Delete = "BST Delete";
+            public const string Max = "BST Max";
+            public const string Min = "BST Min";
+            public const string Successor = "BST Successor";
+            public const string Predecessor = "BST Predecessor";
+            public const string Transplant = "BST Transplant";
         }
 
         public static class TreeAlgorithms
@@ -53,11 +77,20 @@
         public static class SortAlgorithms
         {
             public const string RootTitle = "Sort Algorithms";
+            public const string BubbleSort = "Bubble Sort";
+            public const string CocktailSort = "Cocktail Sort";
+            public const string InsertionSort = "Insertion Sort";
+            public const string SelectionSort = "Selection Sort";
+            public const string MergeSort = "Merge Sort";
+            public const string QuickSort = "Quick Sort";
         }
 
         public static class SearchAlgorithms
         {
             public const string RootTitle = "Search Algorithms";
+            public const string SimpleLinearSearch = "Simple Linear Search";
+            public const string ImproveLinearSearch = "Improved Linear Search";
+            public const string ImproveLinearSearchWithSentinel = "Improved Linear Search With Sentinel";
         }
     }
 }

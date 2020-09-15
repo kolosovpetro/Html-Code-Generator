@@ -53,6 +53,12 @@
         public static class SortAlgorithms
         {
             public const string Root = "SortAlgorithms/";
+            public const string BubbleSort = "BubbleSort/";
+            public const string CocktailSort = "CocktailSort/";
+            public const string InsertionSort = "InsertionSort/";
+            public const string SelectionSort = "SelectionSort/";
+            public const string MergeSort = "MergeSort/";
+            public const string QuickSort = "QuickSort/";
         }
 
         public static class SearchAlgorithms

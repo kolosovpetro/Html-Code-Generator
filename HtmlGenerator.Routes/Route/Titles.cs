@@ -17,5 +17,6 @@
         public const string HeapAlgorithms = "Heap Algorithms";
         public const string BtAlgorithms = "Binary Tree Algorithms";
         public const string BstAlgorithms = "Binary Search Tree Algorithms";
+        public const string KadaneAlgorithm = "Kadane's Algorithm";
     }
 }

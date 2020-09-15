@@ -1,6 +1,6 @@
 ﻿namespace HtmlGenerator.Routes.Route
 {
-    public static class FolderName
+    public static class Folder
     {
         public const string Root = "../../../RootFolder/";
         public const string ClassicAlgorithms = "ClassicAlgorithms/";
@@ -17,5 +17,6 @@
         public const string HeapAlgorithms = "HeapAlgorithms/";
         public const string BtAlgorithms = "BinaryTreeAlgorithms/";
         public const string BstAlgorithms = "BinarySearchTreeAlgorithms/";
+        public const string KadaneAlgorithm = "KadaneAlgorithm/";
     }
 }

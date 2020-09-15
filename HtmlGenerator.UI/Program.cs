@@ -13,7 +13,8 @@ namespace HtmlGenerator.UI
         {
             IEntity root = new MenuEntity(Path.Root, Titles.Title);
             IEntity algorithms = new MenuEntity(Path.ClassicAlgorithms, Titles.ClassicAlgorithms);
-            IEntity sieve = new PageEntity(Path.SieveOfEratosthenes, Titles.SieveOfEratosthenes, SnippetSource.SieveSource);
+            
+            IEntity sieve = new PageEntity(Path.SieveOfEratosthenes, Titles.SieveOfEratosthenes, Snippet.SieveSource);
 
             root.AddChild(algorithms);
             algorithms.AddChild(sieve);

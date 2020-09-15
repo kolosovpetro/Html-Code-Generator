@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Presets" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HtmlGenerator.Abstractions\HtmlGenerator.Abstractions.csproj" />
+      <ProjectReference Include="..\HtmlGenerator.Routes\HtmlGenerator.Routes.csproj" />
+    </ItemGroup>
+
+</Project>

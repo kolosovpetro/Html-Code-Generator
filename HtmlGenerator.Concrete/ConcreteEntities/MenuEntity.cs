@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Services.Concrete;
-using HtmlGenerator.Services.Writer;
 
 namespace HtmlGenerator.Concrete.ConcreteEntities
 {

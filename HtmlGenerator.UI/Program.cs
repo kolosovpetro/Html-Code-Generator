@@ -11,28 +11,38 @@ namespace HtmlGenerator.UI
     {
         private static void Main()
         {
-            IEntity root = new MenuEntity(Path.Root, Titles.Title);
-            IEntity algorithms = new MenuEntity(Path.ClassicAlgorithms, Titles.ClassicAlgorithms);
+            IEntity root = new MenuEntity(Path.MainRoot, Titles.Title);
+
+            // algorithms branch
+            IEntity algorithms = new MenuEntity(Path.ClassicalAlgorithms.Root, Titles.ClassicAlgorithms);
             root.AddChild(algorithms);
-            
-            // concrete algorithms
-            IEntity sieve = new PageEntity(Path.SieveOfEratosthenes, Titles.SieveOfEratosthenes, Snippet.SieveSource);
+
+            IEntity sieve = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes, Titles.SieveOfEratosthenes,
+                Snippet.SieveSource);
             algorithms.AddChild(sieve);
-            
-            IEntity euclideanGcd = new PageEntity(Path.EuclideanGcd, Titles.EuclideanGcd, Snippet.EuclideanGcd);
+
+            IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd, Titles.EuclideanGcd,
+                Snippet.EuclideanGcd);
             algorithms.AddChild(euclideanGcd);
-            
-            IEntity kadaneAlgorithm = new PageEntity(Path.KadaneAlgorithms, Titles.KadaneAlgorithm, Snippet.KadaneAlgorithm);
+
+            IEntity kadaneAlgorithm =
+                new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithms, Titles.KadaneAlgorithm,
+                    Snippet.KadaneAlgorithm);
             algorithms.AddChild(kadaneAlgorithm);
-            
-            IEntity maximumSubarraySum = new PageEntity(Path.MaximumSubarraySum, Titles.MaximumSubarraySum, Snippet.MaximumSubarraySum);
+
+            IEntity maximumSubarraySum = new PageEntity(Path.ClassicalAlgorithms.MaximumSubarraySum,
+                Titles.MaximumSubarraySum,
+                Snippet.MaximumSubarraySum);
             algorithms.AddChild(maximumSubarraySum);
-            
-            IEntity shuntingYard = new PageEntity(Path.ShuntingYard, Titles.ShuntingYard, Snippet.ShuntingYard);
+
+            IEntity shuntingYard = new PageEntity(Path.ClassicalAlgorithms.ShuntingYard, Titles.ShuntingYard,
+                Snippet.ShuntingYard);
             algorithms.AddChild(shuntingYard);
-            
+
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
+
+            // 
         }
     }
 }

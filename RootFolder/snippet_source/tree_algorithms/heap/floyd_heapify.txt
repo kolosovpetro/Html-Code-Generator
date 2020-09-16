@@ -1,0 +1,5 @@
+private void FloydRestoreHeapProperty()
+{
+    for (var i = Count / 2; i >= 0; i--)
+        CalculateDown(i);
+}

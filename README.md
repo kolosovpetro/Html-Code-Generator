@@ -14,6 +14,9 @@ This repository is a cheat sheet on the most famous and important algorithms and
 ## To Do
 
 - Encapsulate route to separate entity, which takes string as parameter and converts it to path, folder, filename
+- Format readme links
+- Implement heap sort in tree algorithms, it's missing
+
 
 
 ## Online version

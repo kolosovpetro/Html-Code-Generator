@@ -1,0 +1,5 @@
+public void Push(int element)
+{
+    HeapBase.Add(element);
+    CalculateUp(Count - 1);
+}

@@ -1,0 +1,8 @@
+public virtual void CalculateUp(int elementIndex)
+{
+    if (elementIndex == 0) return;
+    var parentIndex = ParentIndex(elementIndex);
+    if (HeapBase[parentIndex] > HeapBase[elementIndex]) return;
+    Swap(elementIndex, parentIndex);
+    CalculateUp(parentIndex);
+}

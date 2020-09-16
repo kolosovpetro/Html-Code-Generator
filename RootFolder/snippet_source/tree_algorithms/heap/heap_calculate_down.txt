@@ -1,0 +1,16 @@
+public virtual void CalculateDown(int elementIndex)
+{
+    while (HasLeft(elementIndex))
+    {
+        var biggerIndex = LeftChildIndex(elementIndex);
+
+        if (HasRight(elementIndex) && GetRightChild(elementIndex) > GetLeftChild(elementIndex))
+            biggerIndex = RightChildIndex(elementIndex);
+
+        if (HeapBase[biggerIndex] < HeapBase[elementIndex])
+            break;
+
+        Swap(biggerIndex, elementIndex);
+        elementIndex = biggerIndex;
+    }
+}

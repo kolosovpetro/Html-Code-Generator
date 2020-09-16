@@ -1,0 +1,11 @@
+public virtual int Pop()
+{
+    if (IsEmpty)
+        throw new IndexOutOfRangeException("Heap is empty.");
+
+    var result = HeapBase[0];
+    HeapBase[0] = HeapBase.Last();
+    HeapBase.RemoveAt(Count - 1);
+    CalculateDown(0);
+    return result;
+}

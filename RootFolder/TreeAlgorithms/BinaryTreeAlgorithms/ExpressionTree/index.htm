@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Binary Tree Algorithms</title>
+<title>Binary Expression Tree</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,20 +16,38 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Binary Tree Algorithms</h2>
+<h2>Binary Expression Tree</h2>
 <ul>
-<li><a href="ExpressionTree/">Expression Tree</li>
-<li><a href="PostOrderTraversalIterative/">Post Order Traversal Iterative</li>
-<li><a href="InOrderTraversalIterative/">In Order Traversal Iterative</li>
-<li><a href="InOrderTraversalRecursive/">In Order Traversal Recursive</li>
-<li><a href="OutOrderTraversalRecursive/">Out Order Traversal Recursive</li>
-<li><a href="PostOrderTraversalIterative/">Post Order Traversal Iterative</li>
-<li><a href="PostOrderTraversalRecursive/">Post Order Traversal Recursive</li>
-<li><a href="PreOrderTraversalIterative/">Pre Order Traversal Iterative</li>
-<li><a href="PreOrderTraversalRecursive/">Pre Order Traversal Recursive</li>
-<li><a href="Depth/">Depth</li>
-<li><a href="Height/">Height</li>
+<li><a href="https://github.com/kolosovpetro/Html-Code-Generator">Source</a></li>
 <li><a href="../">Back</a></li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public static IBinaryTree&lt;char&gt; BuildArithmeticTree(string postfix)
+{
+    var stack = new Stack&lt;IBinaryTree&lt;char&gt;&gt;();
+
+    foreach (var input in postfix)
+    {
+        var tree = new BinaryTree&lt;char&gt;(input);
+		
+        if (char.IsDigit(input))
+            stack.Push(tree);
+
+        else
+        {
+            var tree1 = stack.Pop();
+            var tree2 = stack.Pop();
+            tree.AddLeft(tree2);
+            tree.AddRight(tree1);
+            stack.Push(tree);
+        }
+    }
+
+    return stack.Pop();
+}
+</code></pre>
+</div>
 </body>
 </html>

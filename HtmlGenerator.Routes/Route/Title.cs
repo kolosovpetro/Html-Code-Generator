@@ -34,6 +34,7 @@
         public static class BtAlgorithms
         {
             public const string Root = "Binary Tree Algorithms";
+            public const string ExpressionTree = "Binary Expression Tree";
             public const string PreOrderRecursive = "Pre-Order Traversal Recursive";
             public const string InOrderRecursive = "In-Order Traversal Recursive";
             public const string OutOrderRecursive = "Out-Order Traversal Recursive";

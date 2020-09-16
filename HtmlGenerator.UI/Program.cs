@@ -109,6 +109,11 @@ namespace HtmlGenerator.UI
             treeAlgorithms.AddChild(binaryTreeAlgorithms);
 
             // concrete binary tree algorithms
+            IEntity expressionTree = new PageEntity(Path.BtAlgorithms.ExpressionTree,
+                Title.BtAlgorithms.ExpressionTree,
+                Snippet.BtAlgorithms.ExpressionTree);
+            binaryTreeAlgorithms.AddChild(expressionTree);
+            
             IEntity breadthFirstTree = new PageEntity(Path.BtAlgorithms.BreadthFirstIterative,
                 Title.BtAlgorithms.BreadthFirstIterative,
                 Snippet.BtAlgorithms.BreadthFirstIterative);

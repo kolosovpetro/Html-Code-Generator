@@ -86,6 +86,9 @@
 
         public static class BtAlgorithms
         {
+            public const string ExpressionTree =
+                Path.MainRoot + "snippet_source/tree_algorithms/bt/expression_tree.txt";
+
             public const string PreOrderRecursive =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/preorder_recursive.txt";
 

@@ -15,6 +15,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         public string Path { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
+        public string Description { get; }
 
         public PageEntity(string directoryName, string subTitle, string snippetPath)
         {
@@ -22,6 +23,14 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             DirectoryName = directoryName;
             SubTitle = subTitle;
             Title = subTitle;
+        }
+
+        public PageEntity(string directoryName, string subTitle, string snippetPath, string description)
+        {
+            SnippetPath = snippetPath;
+            DirectoryName = directoryName;
+            SubTitle = subTitle;
+            Description = description;
         }
 
         public void AddChild(IEntity entity)
@@ -34,7 +43,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         public void Commit()
         {
             FolderService.Create(Path);
-            WriterService.CreatePageItem(this, SnippetPath);
+            WriterService.CreatePageItem(this, SnippetPath, Description);
         }
     }
 }

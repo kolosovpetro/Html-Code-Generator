@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
-using HtmlGenerator.Routes.Route;
-using HtmlGenerator.Services.Concrete;
 using HtmlGenerator.Services.Folder;
 using HtmlGenerator.Services.Writer;
 

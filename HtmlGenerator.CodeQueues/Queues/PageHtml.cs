@@ -14,6 +14,7 @@ namespace HtmlGenerator.CodeQueues.Queues
             Head.GetHead(entity.Title).ToList().ForEach(queue.Enqueue);
             Body.BodyStart(entity.SubTitle).ToList().ForEach(queue.Enqueue);
             queue.Enqueue("<ul>");
+            queue.Enqueue("<li><a href=\"https://github.com/kolosovpetro/Html-Code-Generator\">Source</a></li>");
             Body.GenerateLinks(entity).ToList().ForEach(queue.Enqueue);
             queue.Enqueue("</ul>");
             CodeSnippet.CodeSnippetStart().ToList().ForEach(queue.Enqueue);

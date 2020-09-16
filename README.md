@@ -4,6 +4,8 @@ This repository is a cheat sheet on the most famous and important algorithms and
 
 ## Sources
 
+Every algorithm present on the site may be found in respected repository:
+
 - [Classical Algorithms](https://github.com/kolosovpetro/Classical-Algorithms)
 - [Search Algorithms](https://github.com/kolosovpetro/Search-Algorithms)
 - [Sort Algorithms](https://github.com/kolosovpetro/Sort-Algorithms)

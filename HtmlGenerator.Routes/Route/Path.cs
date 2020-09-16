@@ -2,7 +2,7 @@
 {
     public static class Path
     {
-        public const string MainRoot = "../../../../RootFolder/";
+        public const string Root = "../../../../RootFolder/";
 
         public static class ClassicalAlgorithms
         {

@@ -18,6 +18,7 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Implement heap sort in tree algorithms, it's missing
 - Modify links to be Root/Algorithms/Concrete
 - Add link to previous page in htmls
+- Fix issues with generic brackets
 
 
 

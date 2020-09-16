@@ -16,8 +16,15 @@ namespace HtmlGenerator.Presets.Presets
 
         public static IEnumerable<string> GenerateLinks(IEntity entity)
         {
-            return entity.ChildObjects.Select(x =>
-                $"<li><a href=\"{x.DirectoryName}\">{x.DirectoryName}</li>");
+            var list = entity.ChildObjects.Select(x =>
+                $"<li><a href=\"{x.DirectoryName}\">{x.DirectoryName}</li>").ToList();
+
+            if (entity.Parent != null)
+            {
+                list.Add("<li><a href=\"../\">Back</li>");
+            }
+
+            return list;
         }
     }
 }

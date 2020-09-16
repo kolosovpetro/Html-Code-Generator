@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Routes.Route;
 
@@ -17,7 +19,7 @@ namespace HtmlGenerator.Presets.Presets
         public static IEnumerable<string> GenerateLinks(IEntity entity)
         {
             var list = entity.ChildObjects.Select(x =>
-                $"<li><a href=\"{x.DirectoryName}\">{x.DirectoryName}</li>").ToList();
+                $"<li><a href=\"{x.DirectoryName}\">{FormatFolderName(x.DirectoryName)}</li>").ToList();
 
             if (entity.Parent != null)
             {
@@ -25,6 +27,23 @@ namespace HtmlGenerator.Presets.Presets
             }
 
             return list;
+        }
+
+        public static IEnumerable<string> SplitOnCapitals(string text)
+        {
+            var regex = new Regex(@"\p{Lu}\p{Ll}*");
+            foreach (Match match in regex.Matches(text))
+                yield return match.Value;
+        }
+
+        public static string FormatFolderName(string folderName)
+        {
+            var builder = new StringBuilder();
+
+            foreach (var word in SplitOnCapitals(folderName))
+                builder.Append(" " + word);
+
+            return builder.ToString().TrimStart();
         }
     }
 }

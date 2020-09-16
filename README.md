@@ -16,9 +16,9 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Encapsulate route to separate entity, which takes string as parameter and converts it to path, folder, filename. Create something like new RouteEntity("Algorithm name"). It will contain folder name AlgorithmName/; Filename: algorithm_name.txt, Title: Algorithm Name
 - Format readme links
 - Implement heap sort in tree algorithms, it's missing
-- Modify links to be Root/Algorithms/Concrete
-- Add link to previous page in htmls
-- Fix issues with generic brackets
+- Modify links to be Root/Algorithms/Concrete (done)
+- Add link to previous page in htmls (done)
+- Fix issues with generic brackets (done)
 
 
 

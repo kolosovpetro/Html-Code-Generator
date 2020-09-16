@@ -31,6 +31,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             DirectoryName = directoryName;
             SubTitle = subTitle;
             Description = description;
+            Title = subTitle;
         }
 
         public void AddChild(IEntity entity)

@@ -4,12 +4,11 @@ This repository is a cheat sheet on the most famous and important algorithms and
 
 ## Sources
 
-- Binary Tree
-- Binary Search Tree
-- Graph Algorithms
-- Classical Algorithms
-- Search Algorithms
-- Sort Algorithms
+- [Classical Algorithms](https://github.com/kolosovpetro/Classical-Algorithms)
+- [Search Algorithms](https://github.com/kolosovpetro/Search-Algorithms)
+- [Sort Algorithms](https://github.com/kolosovpetro/Sort-Algorithms)
+- [Tree Algorithms](https://github.com/kolosovpetro/Tree-Algorithms)
+- [Graph Algorithms](https://github.com/kolosovpetro/Graph-Algorithms)
 
 ## To Do
 
@@ -26,6 +25,7 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Add complexities to algorithms
 - Resize code div, so it will be without scrolls
 - Add algorithm source link to github
+- Add Search Algorithms
 
 
 

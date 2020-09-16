@@ -2,7 +2,7 @@
 {
     public static class Title
     {
-        public const string Root = "Algorithms and Data Structures in C#";
+        public const string MainRoot = "Algorithms and Data Structures in C#";
 
         public static class ClassicalAlgorithms
         {

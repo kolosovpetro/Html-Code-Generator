@@ -2,7 +2,7 @@
 {
     public static class Path
     {
-        public const string Root = "../../../../RootFolder/";
+        public const string MainRoot = "../../../../RootFolder/";
 
         public static class ClassicalAlgorithms
         {
@@ -34,6 +34,7 @@
         public static class BtAlgorithms
         {
             public const string Root = "BinaryTreeAlgorithms/";
+            
             public const string PreOrderRecursive = "PreOrderTraversalRecursive/";
             public const string InOrderRecursive = "InOrderTraversalRecursive/";
             public const string OutOrderRecursive = "OutOrderTraversalRecursive/";

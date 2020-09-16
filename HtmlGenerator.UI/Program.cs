@@ -12,7 +12,7 @@ namespace HtmlGenerator.UI
         private static void Main()
         {
             // root
-            IEntity root = new MenuEntity(Path.Root, Title.Root);
+            IEntity root = new MenuEntity(Path.MainRoot, Title.MainRoot);
 
             // classical algorithms branch
             IEntity classicalAlgorithms =

@@ -11,16 +11,16 @@ namespace HtmlGenerator.Concrete.Tests.Tests
     {
         public void Menu_Entity_Test()
         {
-            IEntity root = new MenuEntity(Path.Root);
+            IEntity root = new MenuEntity(Path.MainRoot);
             IEntity algorithms = new MenuEntity(Path.ClassicalAlgorithms.Root);
             IEntity dataStructures = new MenuEntity(Path.DataStructures.Root);
 
             root.AddChild(algorithms);
             algorithms.AddChild(dataStructures);
 
-            root.Path.Should().Be(Path.Root);
-            algorithms.Path.Should().Be(Path.Root + Path.ClassicalAlgorithms.Root);
-            dataStructures.Path.Should().Be(Path.Root + Path.ClassicalAlgorithms.Root + Path.DataStructures.Root);
+            root.Path.Should().Be(Path.MainRoot);
+            algorithms.Path.Should().Be(Path.MainRoot + Path.ClassicalAlgorithms.Root);
+            dataStructures.Path.Should().Be(Path.MainRoot + Path.ClassicalAlgorithms.Root + Path.DataStructures.Root);
         }
     }
 }

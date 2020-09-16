@@ -36,6 +36,9 @@
         {
             public const string RootTitle = "Binary Tree Algorithms";
 
+            public const string ExpressionTree =
+                "Builds expression tree. Used in augmented calculators and compilers.";
+            
             public const string PreOrderRecursive =
                 "Process node N, then process Left subtree, then process Right subtree.";
 

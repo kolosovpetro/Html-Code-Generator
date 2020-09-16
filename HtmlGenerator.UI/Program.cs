@@ -71,6 +71,55 @@ namespace HtmlGenerator.UI
                 Titles.SortAlgorithms.SelectionSort,
                 Snippet.SortAlgorithms.SelectionSort);
             sortAlgorithms.AddChild(selectionSort);
+            
+            // tree algorithms
+            IEntity treeAlgorithms = new MenuEntity(Path.TreeAlgorithms.Root, Titles.TreeAlgorithms.RootTitle);
+            root.AddChild(treeAlgorithms);
+            
+            // binary tree algorithms
+            IEntity binaryTreeAlgorithms = new MenuEntity(Path.BtAlgorithms.Root, Titles.BtAlgorithms.RootTitle);
+            treeAlgorithms.AddChild(binaryTreeAlgorithms);
+            
+            // concrete binary tree algorithms
+            IEntity breadthFirstTree = new PageEntity(Path.BtAlgorithms.BreadthFirstIterative,
+                Titles.BtAlgorithms.BreadthFirstIterative,
+                Snippet.BtAlgorithms.BreadthFirstIterative);
+            binaryTreeAlgorithms.AddChild(breadthFirstTree);
+            
+            IEntity inOrderIterative = new PageEntity(Path.BtAlgorithms.InOrderIterative,
+                Titles.BtAlgorithms.InOrderIterative,
+                Snippet.BtAlgorithms.InOrderIterative);
+            binaryTreeAlgorithms.AddChild(inOrderIterative);
+            
+            IEntity inOrderRecursive = new PageEntity(Path.BtAlgorithms.InOrderRecursive,
+                Titles.BtAlgorithms.InOrderRecursive,
+                Snippet.BtAlgorithms.InOrderRecursive);
+            binaryTreeAlgorithms.AddChild(inOrderRecursive);
+            
+            IEntity outOrderRecursive = new PageEntity(Path.BtAlgorithms.OutOrderRecursive,
+                Titles.BtAlgorithms.OutOrderRecursive,
+                Snippet.BtAlgorithms.OutOrderRecursive);
+            binaryTreeAlgorithms.AddChild(outOrderRecursive);
+            
+            IEntity postOrderIterative = new PageEntity(Path.BtAlgorithms.PostOrderIterative,
+                Titles.BtAlgorithms.PostOrderIterative,
+                Snippet.BtAlgorithms.PostOrderIterative);
+            binaryTreeAlgorithms.AddChild(postOrderIterative);
+            
+            IEntity postOrderRecursive = new PageEntity(Path.BtAlgorithms.PostOrderRecursive,
+                Titles.BtAlgorithms.PostOrderRecursive,
+                Snippet.BtAlgorithms.PostOrderRecursive);
+            binaryTreeAlgorithms.AddChild(postOrderRecursive);
+            
+            IEntity preOrderIterative = new PageEntity(Path.BtAlgorithms.PreOrderIterative,
+                Titles.BtAlgorithms.PreOrderIterative,
+                Snippet.BtAlgorithms.PreOrderIterative);
+            binaryTreeAlgorithms.AddChild(preOrderIterative);
+            
+            IEntity preOrderRecursive = new PageEntity(Path.BtAlgorithms.PreOrderRecursive,
+                Titles.BtAlgorithms.PreOrderRecursive,
+                Snippet.BtAlgorithms.PreOrderRecursive);
+            binaryTreeAlgorithms.AddChild(preOrderRecursive);
 
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");

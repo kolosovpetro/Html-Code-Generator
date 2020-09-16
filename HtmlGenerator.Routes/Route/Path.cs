@@ -42,6 +42,7 @@
             public const string InOrderIterative = "InOrderTraversalIterative/";
             public const string OutOrderIterative = "OutOrderTraversalIterative/";
             public const string PostOrderIterative = "PostOrderTraversalIterative/";
+            public const string BreadthFirstIterative = "PostOrderTraversalIterative/";
             public const string Height = "Height/";
             public const string Depth = "Depth/";
         }

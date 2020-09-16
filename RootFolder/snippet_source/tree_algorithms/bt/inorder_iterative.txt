@@ -1,0 +1,18 @@
+public IEnumerable<IBinarySearchTree> InOrderTraversalIterative(IBinarySearchTree tree)
+{
+    var stack = new Stack<IBinarySearchTree>();
+    var currentNode = tree;
+
+    while (currentNode != null || stack.Count > 0)
+    {
+        while (currentNode != null)
+        {
+            stack.Push(currentNode);
+            currentNode = currentNode.Left;
+        }
+
+        currentNode = stack.Pop();
+        yield return currentNode;
+        currentNode = currentNode.Right;
+    }
+}

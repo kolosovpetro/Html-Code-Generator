@@ -4,6 +4,18 @@ This repository is a cheat sheet on the most famous and important algorithms and
 
 ## Sources
 
+- Binary Tree
+- Binary Search Tree
+- Graph Algorithms
+- Clssical Algorithms
+- Search Algorithms
+- Sort Algorithms
+
+## To Do
+
+- Encapsulate route to separate entity, which takes string as parameter and converts it to path, folder, filename
+
+
 ## Online version
 
 Watch demo at https://kolosovpetro.github.io/Html-Code-Generator/RootFolder/

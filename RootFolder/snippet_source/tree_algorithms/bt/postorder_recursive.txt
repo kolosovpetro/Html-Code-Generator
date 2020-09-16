@@ -1,0 +1,8 @@
+// LRN
+public void PostOrderTraversal(IBinaryTree<T> binaryTree)
+{
+    if (binaryTree == null) return;
+    PostOrderTraversal(binaryTree.Left);
+    PostOrderTraversal(binaryTree.Right);
+    Console.Write(binaryTree.Data + " ");
+}

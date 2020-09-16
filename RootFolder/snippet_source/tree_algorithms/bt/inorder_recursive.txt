@@ -1,0 +1,8 @@
+// LNR
+public void InOrderTraversal(IBinaryTree<T> binaryTree)
+{
+    if (binaryTree == null) return;
+    InOrderTraversal(binaryTree.Left);
+    Console.Write(binaryTree.Data + " ");
+    InOrderTraversal(binaryTree.Right);
+}

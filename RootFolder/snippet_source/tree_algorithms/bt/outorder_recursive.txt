@@ -1,0 +1,8 @@
+// RNL
+public void OutOrderTraversal(IBinaryTree<T> binaryTree)
+{
+    if (binaryTree == null) return;
+    OutOrderTraversal(binaryTree.Right);
+    Console.Write(binaryTree.Data + " ");
+    OutOrderTraversal(binaryTree.Left);
+}

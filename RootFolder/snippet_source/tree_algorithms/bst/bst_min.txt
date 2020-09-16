@@ -1,0 +1,9 @@
+public IBinarySearchTree Min()
+{
+    var node = Root;
+
+    while (node.Left != null)
+        node = node.Left;
+
+    return node;
+}

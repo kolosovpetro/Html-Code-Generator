@@ -1,0 +1,25 @@
+public IBinarySearchTree BstInsert(int key)
+{
+    IBinarySearchTree currentParent = null;
+    var currentNode = Root;
+
+    while (currentNode != null)
+    {
+        currentParent = currentNode;
+        currentNode = key <= currentNode.Key ? currentNode.Left : currentNode.Right;
+    }
+
+    currentNode = new BinarySearchTree(key) {Parent = currentParent};
+
+    if (currentParent == null)
+        Root = currentNode;
+		
+    else if (key <= currentParent.Key)
+        currentParent.Left = currentNode;
+		
+    else
+        currentParent.Right = currentNode;
+
+    Count++;
+    return currentNode;
+}

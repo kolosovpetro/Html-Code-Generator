@@ -1,0 +1,9 @@
+public IBinarySearchTree Max()
+{
+    var node = Root;
+
+    while (node.Right != null)
+        node = node.Right;
+
+    return node;
+}

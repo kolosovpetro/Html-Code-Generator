@@ -1,0 +1,9 @@
+public IBinarySearchTree Search(int key)
+{
+    var currentNode = Root;
+
+    while (currentNode != null && currentNode.Key != key)
+        currentNode = key < currentNode.Key ? currentNode.Left : currentNode.Right;
+
+    return currentNode;
+}

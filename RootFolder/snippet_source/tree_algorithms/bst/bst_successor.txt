@@ -1,0 +1,15 @@
+public IBinarySearchTree Successor(IBinarySearchTree binarySearchTree)
+{
+    if (binarySearchTree.Right != null)
+        return binarySearchTree.Right.Min();
+
+    var currentParent = binarySearchTree.Parent;
+
+    while (currentParent != null && binarySearchTree == currentParent.Right)
+    {
+        binarySearchTree = currentParent;
+        currentParent = currentParent.Parent;
+    }
+
+    return currentParent;
+}

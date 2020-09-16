@@ -1,0 +1,18 @@
+public IEnumerable<IBinarySearchTree> BreadthFirstTraversalIterative(IBinarySearchTree tree)
+{
+    var queue = new Queue<IBinarySearchTree>();
+    queue.Enqueue(tree);
+
+    while (queue.Count > 0)
+    {
+        var current = queue.Dequeue();
+
+        if (current.HasLeft)
+            queue.Enqueue(current.Left);
+			
+        if (current.HasRight)
+            queue.Enqueue(current.Right);
+
+        yield return current;
+    }
+}

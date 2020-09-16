@@ -110,8 +110,28 @@
             public const string PostOrderIterative =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/postorder_iterative.txt";
 
+            public const string BreadthFirstIterative =
+                Path.MainRoot + "snippet_source/tree_algorithms/bt/breadth_first_iterative.txt";
+
             public const string Height = Path.MainRoot + "snippet_source/tree_algorithms/bt/height.txt";
             public const string Depth = Path.MainRoot + "snippet_source/tree_algorithms/bt/depth.txt";
+        }
+
+        public static class HeapAlgorithms
+        {
+            public const string HeapPush = Path.MainRoot + "snippet_source/tree_algorithms/heap/heap_push.txt";
+            public const string HeapPop = Path.MainRoot + "snippet_source/tree_algorithms/heap/heap_pop.txt";
+
+            public const string HeapCalculateUp =
+                Path.MainRoot + "snippet_source/tree_algorithms/heap/heap_calculate_up.txt";
+
+            public const string HeapCalculateDown =
+                Path.MainRoot + "snippet_source/tree_algorithms/heap/heap_calculate_down.txt";
+
+            public const string FloydAlgorithm =
+                Path.MainRoot + "snippet_source/tree_algorithms/heap/floyd_heapify.txt";
+
+            public const string HeapSort = Path.MainRoot + "snippet_source/tree_algorithms/heap/heap_sort.txt";
         }
     }
 }

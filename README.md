@@ -17,13 +17,14 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Format readme links
 - Implement heap sort in tree algorithms, it's missing
 - Implement (or remove bst predecessor)
-- Modify links to be Root/Algorithms/Concrete (done)
-- Add link to previous page in htmls (done)
-- Fix issues with generic brackets (done)
+- ~~Modify links to be Root/Algorithms/Concrete~~
+- ~~Add link to previous page in htmls~~
+- ~~Fix issues with generic brackets~~
 - Add link to repo in footer
-- Fix links to be normal
+- Fix links to be with normal whitespaced text
 - Add descriptions to algorithms
 - Add complexities to algorithms
+- Resize code div, so it will be without scrolls
 
 
 

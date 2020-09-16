@@ -42,6 +42,36 @@ namespace HtmlGenerator.UI
                 Snippet.ClassicalAlgorithms.ShuntingYard);
             algorithms.AddChild(shuntingYard);
 
+            // sort algorithms branch
+            IEntity sortAlgorithms = new MenuEntity(Path.SortAlgorithms.Root, Titles.SortAlgorithms.RootTitle);
+            root.AddChild(sortAlgorithms);
+
+            IEntity bubbleSort = new PageEntity(Path.SortAlgorithms.BubbleSort, Titles.SortAlgorithms.BubbleSort,
+                Snippet.SortAlgorithms.BubbleSort);
+            sortAlgorithms.AddChild(bubbleSort);
+
+            IEntity cocktailSort = new PageEntity(Path.SortAlgorithms.CocktailSort, Titles.SortAlgorithms.CocktailSort,
+                Snippet.SortAlgorithms.CocktailSort);
+            sortAlgorithms.AddChild(cocktailSort);
+
+            IEntity insertionSort = new PageEntity(Path.SortAlgorithms.InsertionSort,
+                Titles.SortAlgorithms.InsertionSort,
+                Snippet.SortAlgorithms.InsertionSort);
+            sortAlgorithms.AddChild(insertionSort);
+
+            IEntity mergeSort = new PageEntity(Path.SortAlgorithms.MergeSort, Titles.SortAlgorithms.MergeSort,
+                Snippet.SortAlgorithms.MergeSort);
+            sortAlgorithms.AddChild(mergeSort);
+
+            IEntity quickSort = new PageEntity(Path.SortAlgorithms.QuickSort, Titles.SortAlgorithms.QuickSort,
+                Snippet.SortAlgorithms.QuickSort);
+            sortAlgorithms.AddChild(quickSort);
+
+            IEntity selectionSort = new PageEntity(Path.SortAlgorithms.SelectionSort,
+                Titles.SortAlgorithms.SelectionSort,
+                Snippet.SortAlgorithms.SelectionSort);
+            sortAlgorithms.AddChild(selectionSort);
+
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Algorithms and Data Structures in C#</title>
+<title>Algorithms and Data Structures in C#Quick Sort</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,10 +16,43 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Algorithms and Data Structures in C#</h2>
+<h2>Quick Sort</h2>
 <ul>
-<li><a href="ClassicAlgorithms/index.htm">ClassicAlgorithms/</li>
-<li><a href="SortAlgorithms/index.htm">SortAlgorithms/</li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public class QuickSort : ISortAlgorithm
+{
+    public void SortSequence(int[] sequence) => QuickSortExecute(sequence, 0, sequence.Length - 1);
+
+    private static void QuickSortExecute(int[] array, int left, int right)
+    {
+        if (left >= right) return;
+        var pivot = Partition(array, left, right);
+        QuickSortExecute(array, left, pivot - 1);
+        QuickSortExecute(array, pivot + 1, right);
+    }
+
+    private static int Partition(int[] array, int left, int right)
+    {
+        var pivot = array[right];
+        var end = left;
+
+        for (var i = left; i < right; i++)
+        {
+            if (array[i] < pivot)
+            {
+                ISortAlgorithm.Swap(array, i, end);
+                end++;
+            }
+        }
+
+        ISortAlgorithm.Swap(array, end, right);
+        return end;
+    }
+}
+</code></pre>
+</div>
 </body>
 </html>

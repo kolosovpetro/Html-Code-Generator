@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Algorithms and Data Structures in C#</title>
+<title>Algorithms and Data Structures in C#Selection Sort</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,10 +16,28 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Algorithms and Data Structures in C#</h2>
+<h2>Selection Sort</h2>
 <ul>
-<li><a href="ClassicAlgorithms/index.htm">ClassicAlgorithms/</li>
-<li><a href="SortAlgorithms/index.htm">SortAlgorithms/</li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public class SelectionSort : ISortAlgorithm
+{
+    public void SortSequence(int[] sequence)
+    {
+        for (var k = 0; k < sequence.Length; k++)
+        {
+			var minIndex = k;
+
+			for (var j = k + 1; j < sequence.Length; j++)
+				minIndex = sequence[minIndex] < sequence[j] ? minIndex : j;
+        
+			ISortAlgorithm.Swap(sequence, k, minIndex);
+        }
+    }
+}
+</code></pre>
+</div>
 </body>
 </html>

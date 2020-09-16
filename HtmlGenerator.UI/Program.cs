@@ -129,27 +129,27 @@ namespace HtmlGenerator.UI
                 Titles.BstAlgorithms.Insert,
                 Snippet.BstAlgorithms.Insert);
             bstAlgorithms.AddChild(bstInsert);
-            
+
             IEntity bstDelete = new PageEntity(Path.BstAlgorithms.Delete,
                 Titles.BstAlgorithms.Delete,
                 Snippet.BstAlgorithms.Delete);
             bstAlgorithms.AddChild(bstDelete);
-            
+
             IEntity bstMax = new PageEntity(Path.BstAlgorithms.Max,
                 Titles.BstAlgorithms.Max,
                 Snippet.BstAlgorithms.Max);
             bstAlgorithms.AddChild(bstMax);
-            
+
             IEntity bstMin = new PageEntity(Path.BstAlgorithms.Min,
                 Titles.BstAlgorithms.Min,
                 Snippet.BstAlgorithms.Min);
             bstAlgorithms.AddChild(bstMin);
-            
+
             IEntity bstPredecessor = new PageEntity(Path.BstAlgorithms.Predecessor,
                 Titles.BstAlgorithms.Predecessor,
                 Snippet.BstAlgorithms.Predecessor);
             bstAlgorithms.AddChild(bstPredecessor);
-            
+
             IEntity bstSearch = new PageEntity(Path.BstAlgorithms.Search,
                 Titles.BstAlgorithms.Search,
                 Snippet.BstAlgorithms.Search);
@@ -159,46 +159,75 @@ namespace HtmlGenerator.UI
                 Titles.BstAlgorithms.Successor,
                 Snippet.BstAlgorithms.Successor);
             bstAlgorithms.AddChild(bstSuccessor);
-            
+
             IEntity bstTransplant = new PageEntity(Path.BstAlgorithms.Transplant,
                 Titles.BstAlgorithms.Transplant,
                 Snippet.BstAlgorithms.Transplant);
             bstAlgorithms.AddChild(bstTransplant);
-            
+
             // heap algorithms
             IEntity heapAlgorithms = new MenuEntity(Path.HeapAlgorithms.Root, Titles.HeapAlgorithms.RootTitle);
             treeAlgorithms.AddChild(heapAlgorithms);
-            
+
             IEntity heapPush = new PageEntity(Path.HeapAlgorithms.HeapPush,
                 Titles.HeapAlgorithms.HeapPush,
                 Snippet.HeapAlgorithms.HeapPush);
             heapAlgorithms.AddChild(heapPush);
-            
+
             IEntity heapPop = new PageEntity(Path.HeapAlgorithms.HeapPop,
                 Titles.HeapAlgorithms.HeapPop,
                 Snippet.HeapAlgorithms.HeapPop);
             heapAlgorithms.AddChild(heapPop);
-            
+
             IEntity heapCalculateUp = new PageEntity(Path.HeapAlgorithms.HeapCalculateUp,
                 Titles.HeapAlgorithms.HeapCalculateUp,
                 Snippet.HeapAlgorithms.HeapCalculateUp);
             heapAlgorithms.AddChild(heapCalculateUp);
-            
+
             IEntity heapCalculateDown = new PageEntity(Path.HeapAlgorithms.HeapCalculateDown,
                 Titles.HeapAlgorithms.HeapCalculateDown,
                 Snippet.HeapAlgorithms.HeapCalculateDown);
             heapAlgorithms.AddChild(heapCalculateDown);
-            
+
             IEntity floydHeapify = new PageEntity(Path.HeapAlgorithms.FloydAlgorithm,
                 Titles.HeapAlgorithms.FloydAlgorithm,
                 Snippet.HeapAlgorithms.FloydAlgorithm);
             heapAlgorithms.AddChild(floydHeapify);
-            
+
             IEntity heapSort = new PageEntity(Path.HeapAlgorithms.HeapSort,
                 Titles.HeapAlgorithms.HeapSort,
                 Snippet.HeapAlgorithms.HeapSort);
             heapAlgorithms.AddChild(heapSort);
+
+            // graph algorithms
+            IEntity graphAlgorithms = new MenuEntity(Path.GraphAlgorithms.Root, Titles.GraphAlgorithms.RootTitle);
+            root.AddChild(graphAlgorithms);
+
+            IEntity graphBreadthFirst = new PageEntity(Path.GraphAlgorithms.BreadthFirst,
+                Titles.GraphAlgorithms.BreadthFirst,
+                Snippet.GraphAlgorithms.BreadthFirst);
+            graphAlgorithms.AddChild(graphBreadthFirst);
             
+            IEntity graphDepthFirstIterative = new PageEntity(Path.GraphAlgorithms.DepthFirstIterative,
+                Titles.GraphAlgorithms.DepthFirstIterative,
+                Snippet.GraphAlgorithms.DepthFirstIterative);
+            graphAlgorithms.AddChild(graphDepthFirstIterative);
+            
+            IEntity graphDepthFirstRecursive = new PageEntity(Path.GraphAlgorithms.DepthFirstRecursive,
+                Titles.GraphAlgorithms.DepthFirstRecursive,
+                Snippet.GraphAlgorithms.DepthFirstRecursive);
+            graphAlgorithms.AddChild(graphDepthFirstRecursive);
+            
+            IEntity dijkstraAlgorithm = new PageEntity(Path.GraphAlgorithms.DijkstraAlgorithm,
+                Titles.GraphAlgorithms.DijkstraAlgorithm,
+                Snippet.GraphAlgorithms.DijkstraAlgorithm);
+            graphAlgorithms.AddChild(dijkstraAlgorithm);
+            
+            IEntity kahnAlgorithm = new PageEntity(Path.GraphAlgorithms.KahnAlgorithm,
+                Titles.GraphAlgorithms.KahnAlgorithm,
+                Snippet.GraphAlgorithms.KahnAlgorithm);
+            graphAlgorithms.AddChild(kahnAlgorithm);
+
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

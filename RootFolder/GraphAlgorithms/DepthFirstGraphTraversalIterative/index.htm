@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Algorithms and Data Structures in C#</title>
+<title>Algorithms and Data Structures in C#Depth-First Graph Traversal Iterative</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,12 +16,35 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Algorithms and Data Structures in C#</h2>
+<h2>Depth-First Graph Traversal Iterative</h2>
 <ul>
-<li><a href="ClassicAlgorithms/index.htm">ClassicAlgorithms/</li>
-<li><a href="SortAlgorithms/index.htm">SortAlgorithms/</li>
-<li><a href="TreeAlgorithms/index.htm">TreeAlgorithms/</li>
-<li><a href="GraphAlgorithms/index.htm">GraphAlgorithms/</li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public static IEnumerable<IVertex<T>> DepthFirstIterative(IGraph<T> graph, IVertex<T> startVertex,
+    IVertex<T> searchVertex)
+{
+    if (!graph.ContainsVertex(startVertex) || !graph.ContainsVertex(searchVertex))
+        throw new InvalidOperationException("One or more vertices are not belong to graph.");
+
+    var stack = new Stack<IVertex<T>>();
+
+    stack.Push(startVertex);
+
+    while (stack.Any())
+    {
+        var vertex = stack.Pop();
+        vertex.Visit();
+        yield return vertex;
+        if (vertex.Equals(searchVertex))
+            yield break;
+        var unvisitedVertices = vertex.AdjacentUnvisitedVertices();
+        foreach (var v in unvisitedVertices)
+            stack.Push(v);
+    }
+}
+</code></pre>
+</div>
 </body>
 </html>

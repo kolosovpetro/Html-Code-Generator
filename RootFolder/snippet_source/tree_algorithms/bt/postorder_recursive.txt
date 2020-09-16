@@ -1,5 +1,5 @@
 // LRN
-public void PostOrderTraversal(IBinaryTree<T> binaryTree)
+public void PostOrderTraversal(IBinaryTree&lt;T&gt; binaryTree)
 {
     if (binaryTree == null) return;
     PostOrderTraversal(binaryTree.Left);

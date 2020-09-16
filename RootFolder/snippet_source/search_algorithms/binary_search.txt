@@ -5,13 +5,13 @@ public class BinarySearch : ISearchAlgorithm
         var min = 0;
         var max = array.Length - 1;
 
-        while (min <= max)
+        while (min &lt;= max)
         {
             var mid = (min + max) / 2;
 
             if (searchValue == array[mid]) return true;
 
-            if (searchValue < array[mid]) max = mid - 1;
+            if (searchValue &lt; array[mid]) max = mid - 1;
 
             else min = mid + 1;
         }

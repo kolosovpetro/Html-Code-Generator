@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Shunting-Yard Algorithhm</title>
+<title>Shunting-Yard Algorithhm</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,10 +22,10 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public static Queue<char> ShuntingYard(string input)
+public static Queue&lt;char&gt; ShuntingYard(string input)
 {
-    var outputQueue = new Queue<char>();
-    var operandStack = new Stack<char>();
+    var outputQueue = new Queue&lt;char&gt;();
+    var operandStack = new Stack&lt;char&gt;();
 
     foreach (var token in input)
     {
@@ -51,7 +51,7 @@ public static Queue<char> ShuntingYard(string input)
         }
 
         while (operandStack.Any()
-            && Precedence(operandStack.Peek()) >= Precedence(token)
+            && Precedence(operandStack.Peek()) &gt;= Precedence(token)
             && Associativity(token) == "Left") 
                 outputQueue.Enqueue(operandStack.Pop());
 

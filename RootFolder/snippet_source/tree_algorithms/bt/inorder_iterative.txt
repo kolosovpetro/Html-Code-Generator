@@ -1,9 +1,9 @@
-public IEnumerable<IBinarySearchTree> InOrderTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; InOrderTraversalIterative(IBinarySearchTree tree)
 {
-    var stack = new Stack<IBinarySearchTree>();
+    var stack = new Stack&lt;IBinarySearchTree&gt;();
     var currentNode = tree;
 
-    while (currentNode != null || stack.Count > 0)
+    while (currentNode != null || stack.Count &gt; 0)
     {
         while (currentNode != null)
         {

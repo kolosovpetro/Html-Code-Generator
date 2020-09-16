@@ -1,10 +1,10 @@
-public static IEnumerable<IVertex<T>> DepthFirstIterative(IGraph<T> graph, IVertex<T> startVertex,
-    IVertex<T> searchVertex)
+public static IEnumerable&lt;IVertex&lt;T&gt;&gt; DepthFirstIterative(IGraph&lt;T&gt; graph, IVertex&lt;T&gt; startVertex,
+    IVertex&lt;T&gt; searchVertex)
 {
     if (!graph.ContainsVertex(startVertex) || !graph.ContainsVertex(searchVertex))
         throw new InvalidOperationException("One or more vertices are not belong to graph.");
 
-    var stack = new Stack<IVertex<T>>();
+    var stack = new Stack&lt;IVertex&lt;T&gt;&gt;();
 
     stack.Push(startVertex);
 

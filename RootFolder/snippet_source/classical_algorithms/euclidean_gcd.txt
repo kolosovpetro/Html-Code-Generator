@@ -2,7 +2,7 @@ public static class EuclideanGcd
 {
     public static int CalculateGcd(int m, int n)
     {
-        if (m < n) Swap(ref m, ref n);
+        if (m &lt; n) Swap(ref m, ref n);
 
         while (n != 0)
         {

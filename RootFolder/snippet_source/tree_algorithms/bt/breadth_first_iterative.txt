@@ -1,9 +1,9 @@
-public IEnumerable<IBinarySearchTree> BreadthFirstTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; BreadthFirstTraversalIterative(IBinarySearchTree tree)
 {
-    var queue = new Queue<IBinarySearchTree>();
+    var queue = new Queue&lt;IBinarySearchTree&gt;();
     queue.Enqueue(tree);
 
-    while (queue.Count > 0)
+    while (queue.Count &gt; 0)
     {
         var current = queue.Dequeue();
 

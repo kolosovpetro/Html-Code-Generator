@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Kahn Algorithm (Topological Sort)</title>
+<title>Kahn Algorithm (Topological Sort)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,13 +22,13 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public static IEnumerable<IVertex<T>> KahnSort(IGraph<T> graph)
+public static IEnumerable&lt;IVertex&lt;T&gt;&gt; KahnSort(IGraph&lt;T&gt; graph)
 {
     if (!graph.IsAcyclic())
         throw new InvalidOperationException("Kahn sort can be performed only on acyclic graph.");
 
-    var queue = new Queue<IVertex<T>>();
-    var startVertices = graph.Vertices.Where(x => x.InDegree() == 0).ToList();
+    var queue = new Queue&lt;IVertex&lt;T&gt;&gt;();
+    var startVertices = graph.Vertices.Where(x =&gt; x.InDegree() == 0).ToList();
     foreach (var vertex in startVertices)
         queue.Enqueue(vertex);
 
@@ -39,7 +39,7 @@ public static IEnumerable<IVertex<T>> KahnSort(IGraph<T> graph)
         var adjacentVertices = vertex.AdjacentVertices();
         graph.RemoveVertex(vertex);
 
-        foreach (var v in adjacentVertices.Where(v => v.InDegree() == 0)) 
+        foreach (var v in adjacentVertices.Where(v =&gt; v.InDegree() == 0)) 
             queue.Enqueue(v);
     }
 }

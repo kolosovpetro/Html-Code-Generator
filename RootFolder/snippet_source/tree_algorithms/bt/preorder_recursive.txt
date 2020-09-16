@@ -1,5 +1,5 @@
 // NLR
-public void PreOrderTraversal(IBinaryTree<T> binaryTree)
+public void PreOrderTraversal(IBinaryTree&lt;T&gt; binaryTree)
 {
     if (binaryTree == null) return;
     Console.Write(binaryTree.Data + " ");

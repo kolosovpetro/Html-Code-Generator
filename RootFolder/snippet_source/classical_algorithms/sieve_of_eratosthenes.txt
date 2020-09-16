@@ -2,13 +2,13 @@ private static bool[] SieveOfEratosthenes(int upperBound)
 {
     var primes = new bool[upperBound + 1];
 
-    for (var i = 0; i < primes.Length; i++)
+    for (var i = 0; i &lt; primes.Length; i++)
         primes[i] = true;
 
-    for (var p = 2; p * p < upperBound; p++)
+    for (var p = 2; p * p &lt; upperBound; p++)
     {
         if (!primes[p]) continue;
-        for (var i = p * p; i < upperBound; i += p)
+        for (var i = p * p; i &lt; upperBound; i += p)
 			primes[i] = false;
     }
 

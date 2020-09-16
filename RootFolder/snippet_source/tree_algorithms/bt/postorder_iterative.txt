@@ -1,7 +1,7 @@
-public IEnumerable<IBinarySearchTree> PostOrderTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; PostOrderTraversalIterative(IBinarySearchTree tree)
 {
-    var stack = new Stack<IBinarySearchTree>();
-    var outStack = new Stack<IBinarySearchTree>();
+    var stack = new Stack&lt;IBinarySearchTree&gt;();
+    var outStack = new Stack&lt;IBinarySearchTree&gt;();
     stack.Push(tree);
 
     while (stack.Any())
@@ -16,6 +16,6 @@ public IEnumerable<IBinarySearchTree> PostOrderTraversalIterative(IBinarySearchT
             stack.Push(currentNode.Right);
     }
 
-        while (outStack.Count > 0)
+        while (outStack.Count &gt; 0)
             yield return outStack.Pop();
 }

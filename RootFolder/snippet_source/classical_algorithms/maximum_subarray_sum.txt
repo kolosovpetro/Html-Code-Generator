@@ -13,18 +13,18 @@ private static int FindMaxCrossSubArray(int[] array, int first, int mid, int las
 {
     int leftSum = 0, rightSum = 0, sum = 0;
 
-    for (var i = mid; i >= first; i--)
+    for (var i = mid; i &gt;= first; i--)
         sum += array[i];
 		
-    if (sum > leftSum)
+    if (sum &gt; leftSum)
         leftSum = sum;
 
     sum = 0;
 
-    for (var k = mid + 1; k < last; k++)
+    for (var k = mid + 1; k &lt; last; k++)
         sum += array[k];
 		
-    if (rightSum < sum)
+    if (rightSum &lt; sum)
         rightSum = sum;
 
     return leftSum + rightSum;

@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Kadane Algorithm</title>
+<title>Kadane Algorithm</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -30,10 +30,10 @@ public static int KadaneAlgorithm(int[] a)
     {
         currentMax += item; 
               
-        if (max < currentMax) 
+        if (max &lt; currentMax) 
             max = currentMax; 
               
-        if (currentMax < 0) 
+        if (currentMax &lt; 0) 
             currentMax = 0;
     } 
           

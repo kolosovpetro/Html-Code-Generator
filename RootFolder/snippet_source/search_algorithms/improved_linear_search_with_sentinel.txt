@@ -11,6 +11,6 @@ public class ImprovedLinearSearchWithSentinel : ISearchAlgorithm
 
         array[^1] = last;
 
-        return step < array.Length - 1 || last == searchValue;
+        return step &lt; array.Length - 1 || last == searchValue;
     }
 }

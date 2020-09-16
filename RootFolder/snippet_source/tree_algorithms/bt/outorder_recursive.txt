@@ -1,5 +1,5 @@
 // RNL
-public void OutOrderTraversal(IBinaryTree<T> binaryTree)
+public void OutOrderTraversal(IBinaryTree&lt;T&gt; binaryTree)
 {
     if (binaryTree == null) return;
     OutOrderTraversal(binaryTree.Right);

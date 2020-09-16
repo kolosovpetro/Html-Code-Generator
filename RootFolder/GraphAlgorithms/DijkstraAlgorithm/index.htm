@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Dijkstra Algorithm</title>
+<title>Dijkstra Algorithm</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,12 +22,12 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public static List<DistanceModel<T>> DijkstraMethod(IGraph<T> graph, IVertex<T> start)
+public static List&lt;DistanceModel&lt;T&gt;&gt; DijkstraMethod(IGraph&lt;T&gt; graph, IVertex&lt;T&gt; start)
 {
     if (!graph.ContainsVertex(start))
         throw new InvalidOperationException("Vertex does not belong to graph");
 
-    var list = new List<DistanceModel<T>> {new DistanceModel<T>(start, start, 0)};
+    var list = new List&lt;DistanceModel&lt;T&gt;&gt; {new DistanceModel&lt;T&gt;(start, start, 0)};
     var currentVertex = start;
     var iterator = 0;
 
@@ -49,7 +49,7 @@ public static List<DistanceModel<T>> DijkstraMethod(IGraph<T> graph, IVertex<T> 
             }
 
             if (!Contains(list, edge.EndVertex))
-                list.Add(new DistanceModel<T>
+                list.Add(new DistanceModel&lt;T&gt;
                 {
                     Vertex = edge.EndVertex,
                     PreviousVertex = currentVertex,

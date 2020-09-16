@@ -6,10 +6,10 @@ public static int KadaneAlgorithm(int[] a)
     {
         currentMax += item; 
               
-        if (max < currentMax) 
+        if (max &lt; currentMax) 
             max = currentMax; 
               
-        if (currentMax < 0) 
+        if (currentMax &lt; 0) 
             currentMax = 0;
     } 
           

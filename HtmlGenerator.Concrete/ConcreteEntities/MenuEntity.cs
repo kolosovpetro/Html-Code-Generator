@@ -28,7 +28,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         {
             DirectoryName = directoryName;
             SubTitle = subTitle;
-            Title = Titles.MainTitle + subTitle;
+            Title = subTitle;
             Path = Parent?.Path + directoryName;
         }
 

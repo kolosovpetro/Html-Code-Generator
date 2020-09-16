@@ -1,4 +1,4 @@
-public static void DepthFirstSearchIterative(IGraph<T> graph, IVertex<T> startVertex)
+public static void DepthFirstSearchIterative(IGraph&lt;T&gt; graph, IVertex&lt;T&gt; startVertex)
 {
     if (!graph.ContainsVertex(startVertex))
         throw new InvalidOperationException("Vertex does not belong to graph.");

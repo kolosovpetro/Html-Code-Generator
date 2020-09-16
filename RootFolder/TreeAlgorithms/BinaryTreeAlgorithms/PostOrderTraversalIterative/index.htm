@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Post-Order Traversal Iterative</title>
+<title>Post-Order Traversal Iterative</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,10 +22,10 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public IEnumerable<IBinarySearchTree> PostOrderTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; PostOrderTraversalIterative(IBinarySearchTree tree)
 {
-    var stack = new Stack<IBinarySearchTree>();
-    var outStack = new Stack<IBinarySearchTree>();
+    var stack = new Stack&lt;IBinarySearchTree&gt;();
+    var outStack = new Stack&lt;IBinarySearchTree&gt;();
     stack.Push(tree);
 
     while (stack.Any())
@@ -40,7 +40,7 @@ public IEnumerable<IBinarySearchTree> PostOrderTraversalIterative(IBinarySearchT
             stack.Push(currentNode.Right);
     }
 
-        while (outStack.Count > 0)
+        while (outStack.Count &gt; 0)
             yield return outStack.Pop();
 }
 </code></pre>

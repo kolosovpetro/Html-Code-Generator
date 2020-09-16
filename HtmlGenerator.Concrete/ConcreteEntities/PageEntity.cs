@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using HtmlGenerator.Abstractions.Interfaces;
-using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Folder;
 using HtmlGenerator.Services.Writer;
 
@@ -22,7 +21,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             SnippetPath = snippetPath;
             DirectoryName = directoryName;
             SubTitle = subTitle;
-            Title = Titles.MainTitle + subTitle;
+            Title = subTitle;
         }
 
         public void AddChild(IEntity entity)

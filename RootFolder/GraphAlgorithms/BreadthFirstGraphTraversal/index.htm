@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Breadth-First Graph Traversal</title>
+<title>Breadth-First Graph Traversal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,13 +22,13 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public static IEnumerable<IVertex<T>> BreadthFirstSearchIterative(IGraph<T> graph, IVertex<T> startVertex, 
-		IVertex<T> endVertex)
+public static IEnumerable&lt;IVertex&lt;T&gt;&gt; BreadthFirstSearchIterative(IGraph&lt;T&gt; graph, IVertex&lt;T&gt; startVertex, 
+		IVertex&lt;T&gt; endVertex)
 {
     if (!graph.ContainsVertex(startVertex) || !graph.ContainsVertex(endVertex))
         throw new InvalidOperationException("One or more vertices are not belong to graph.");
 
-    var queue = new Queue<IVertex<T>>();
+    var queue = new Queue&lt;IVertex&lt;T&gt;&gt;();
     queue.Enqueue(startVertex);
 
     while (queue.Any())

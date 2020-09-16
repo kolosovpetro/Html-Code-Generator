@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#In-Order Traversal Iterative</title>
+<title>In-Order Traversal Iterative</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -22,12 +22,12 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
-public IEnumerable<IBinarySearchTree> InOrderTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; InOrderTraversalIterative(IBinarySearchTree tree)
 {
-    var stack = new Stack<IBinarySearchTree>();
+    var stack = new Stack&lt;IBinarySearchTree&gt;();
     var currentNode = tree;
 
-    while (currentNode != null || stack.Count > 0)
+    while (currentNode != null || stack.Count &gt; 0)
     {
         while (currentNode != null)
         {

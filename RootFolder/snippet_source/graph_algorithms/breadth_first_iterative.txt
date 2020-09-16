@@ -1,10 +1,10 @@
-public static IEnumerable<IVertex<T>> BreadthFirstSearchIterative(IGraph<T> graph, IVertex<T> startVertex, 
-		IVertex<T> endVertex)
+public static IEnumerable&lt;IVertex&lt;T&gt;&gt; BreadthFirstSearchIterative(IGraph&lt;T&gt; graph, IVertex&lt;T&gt; startVertex, 
+		IVertex&lt;T&gt; endVertex)
 {
     if (!graph.ContainsVertex(startVertex) || !graph.ContainsVertex(endVertex))
         throw new InvalidOperationException("One or more vertices are not belong to graph.");
 
-    var queue = new Queue<IVertex<T>>();
+    var queue = new Queue&lt;IVertex&lt;T&gt;&gt;();
     queue.Enqueue(startVertex);
 
     while (queue.Any())

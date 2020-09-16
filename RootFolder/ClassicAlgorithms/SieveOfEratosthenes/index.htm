@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Sieve Of Eratosthenes</title>
+<title>Sieve Of Eratosthenes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -26,13 +26,13 @@ private static bool[] SieveOfEratosthenes(int upperBound)
 {
     var primes = new bool[upperBound + 1];
 
-    for (var i = 0; i < primes.Length; i++)
+    for (var i = 0; i &lt; primes.Length; i++)
         primes[i] = true;
 
-    for (var p = 2; p * p < upperBound; p++)
+    for (var p = 2; p * p &lt; upperBound; p++)
     {
         if (!primes[p]) continue;
-        for (var i = p * p; i < upperBound; i += p)
+        for (var i = p * p; i &lt; upperBound; i += p)
 			primes[i] = false;
     }
 

@@ -1,9 +1,9 @@
-public IEnumerable<IBinarySearchTree> PreOrderTraversalIterative(IBinarySearchTree tree)
+public IEnumerable&lt;IBinarySearchTree&gt; PreOrderTraversalIterative(IBinarySearchTree tree)
 {
-    var stack = new Stack<IBinarySearchTree>();
+    var stack = new Stack&lt;IBinarySearchTree&gt;();
     stack.Push(tree);
 
-    while (stack.Count > 0)
+    while (stack.Count &gt; 0)
     {
         var currentNode = stack.Pop();
         yield return currentNode;

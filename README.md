@@ -20,6 +20,10 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Modify links to be Root/Algorithms/Concrete (done)
 - Add link to previous page in htmls (done)
 - Fix issues with generic brackets (done)
+- Add link to repo in footer
+- Fix links to be normal
+- Add descriptions to algorithms
+- Add complexities to algorithms
 
 
 

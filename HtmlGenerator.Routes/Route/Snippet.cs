@@ -107,9 +107,6 @@
             public const string InOrderIterative =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/inorder_iterative.txt";
 
-            public const string OutOrderIterative =
-                Path.MainRoot + "snippet_source/tree_algorithms/bt/outorder_iterative.txt";
-
             public const string PostOrderIterative =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/postorder_iterative.txt";
 

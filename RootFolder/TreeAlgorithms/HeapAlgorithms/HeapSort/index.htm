@@ -17,7 +17,7 @@
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
 <h2>Heap Sort</h2>
-<h3>Description</h3> Advanced sort alggorithm. Complexity: O(nlogn).
+<h3>Description</h3> Advanced sort algorithm. Complexity: O(nlogn).
 <ul>
 <li><a href="https://github.com/kolosovpetro/Html-Code-Generator">Source</a></li>
 <li><a href="../">Back</a></li>
@@ -25,6 +25,19 @@
 <h3>Code snippet</h3>
 <div class="common">
 <pre><code class="csharp">
+public static int[] HeapSortExecute(params int[] collection)
+{
+    var heap = FloydMaxHeap.BuildMaxHeap(collection);
+    var arr = new int[collection.Length];
+
+    while (heap.Count > 0)
+    {
+        var current = heap.Pop();
+        arr[heap.Count] = current;
+    }
+
+    return arr;
+}
 </code></pre>
 </div>
 </body>

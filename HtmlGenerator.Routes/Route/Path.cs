@@ -41,7 +41,6 @@
             public const string PostOrderRecursive = "PostOrderTraversalRecursive/";
             public const string PreOrderIterative = "PreOrderTraversalIterative/";
             public const string InOrderIterative = "InOrderTraversalIterative/";
-            public const string OutOrderIterative = "OutOrderTraversalIterative/";
             public const string PostOrderIterative = "PostOrderTraversalIterative/";
             public const string BreadthFirstIterative = "PostOrderTraversalIterative/";
             public const string Height = "Height/";

@@ -4,7 +4,6 @@
     {
         public static class ClassicalAlgorithms
         {
-            public const string Root = "Classical Algorithms";
             public const string SieveOfEratosthenes = "Generates primes up to given maximum.";
             public const string EuclideanGcd = "Finds GCD of two integers m and n.";
 
@@ -23,19 +22,16 @@
 
         public static class HeapAlgorithms
         {
-            public const string RootTitle = "Heap Algorithms";
             public const string HeapPush = "Pushes new item to the heap.";
             public const string HeapPop = "Pops top element from the heap. Element is removed from the heap.";
             public const string HeapCalculateUp = "Re-heapifies the n-size heap from up.";
             public const string HeapCalculateDown = "Re-heapifies the n-size heap from down.";
             public const string FloydAlgorithm = "Re-heapifies the n-size heap in O(n) time.";
-            public const string HeapSort = "Advanced sort alggorithm. Complexity: O(nlogn).";
+            public const string HeapSort = "Advanced sort algorithm. Complexity: O(nlogn).";
         }
 
         public static class BtAlgorithms
         {
-            public const string RootTitle = "Binary Tree Algorithms";
-
             public const string ExpressionTree =
                 "Builds expression tree. Used in augmented calculators and compilers.";
             
@@ -50,7 +46,6 @@
                 "Process node N, then process Left subtree, then process Right subtree.";
 
             public const string InOrderIterative = "Process Left subtree first, then node N, then Right subtree.";
-            public const string OutOrderIterative = "Process Right subtree, then node N, then Left subtree.";
             public const string PostOrderIterative = "Process Left subtree, then Right subtree, then node N.";
 
             public const string BreadthFirstIterative =
@@ -62,7 +57,6 @@
 
         public static class BstAlgorithms
         {
-            public const string Root = "Binary Search Tree Algorithms";
             public const string Insert = "Inserts new node to BST and gives pointer to it.";
             public const string Search = "Searches for particular node in BST.";
             public const string Delete = "Deletes node from bst.";
@@ -73,14 +67,8 @@
             public const string Transplant = "Auxiliary method used in BST Delete.";
         }
 
-        public static class TreeAlgorithms
-        {
-            public const string RootTitle = "Tree Algorithms";
-        }
-
         public static class GraphAlgorithms
         {
-            public const string RootTitle = "Graph Algorithms";
             public const string DijkstraAlgorithm = "Single shortest patch algorithm finder.";
             public const string BreadthFirst = "Level order traversal of graph nodes.";
             public const string DepthFirstIterative = "Recursively traversals all graph nodes.";
@@ -90,7 +78,6 @@
 
         public static class SortAlgorithms
         {
-            public const string RootTitle = "Sort Algorithms";
             public const string BubbleSort = "Simple Sort Algorithm. Sorts sequence of integers.";
             public const string CocktailSort = "Simple Sort Algorithm. Sorts sequence of integers.";
             public const string InsertionSort = "Simple Sort Algorithm. Sorts sequence of integers.";
@@ -101,9 +88,6 @@
 
         public static class SearchAlgorithms
         {
-            public const string RootTitle =
-                "Searches for particular value in integer sequence. Returns true if found, otherwise false.";
-
             public const string SimpleLinearSearch =
                 "Searches for particular value in integer sequence. Returns true if found, otherwise false.";
 

@@ -189,11 +189,6 @@ namespace HtmlGenerator.UI
                 Snippet.BstAlgorithms.Min, Description.BstAlgorithms.Min);
             bstAlgorithms.AddChild(bstMin);
 
-            IEntity bstPredecessor = new PageEntity(Path.BstAlgorithms.Predecessor,
-                Title.BstAlgorithms.Predecessor,
-                Snippet.BstAlgorithms.Predecessor, Description.BstAlgorithms.Predecessor);
-            bstAlgorithms.AddChild(bstPredecessor);
-
             IEntity bstSearch = new PageEntity(Path.BstAlgorithms.Search,
                 Title.BstAlgorithms.Search,
                 Snippet.BstAlgorithms.Search, Description.BstAlgorithms.Search);

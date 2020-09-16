@@ -21,7 +21,7 @@ namespace HtmlGenerator.Presets.Presets
 
             if (entity.Parent != null)
             {
-                list.Add("<li><a href=\"../\">Back</li>");
+                list.Add("<li><a href=\"../\">Back</a></li>");
             }
 
             return list;

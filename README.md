@@ -7,7 +7,7 @@ This repository is a cheat sheet on the most famous and important algorithms and
 - Binary Tree
 - Binary Search Tree
 - Graph Algorithms
-- Clssical Algorithms
+- Classical Algorithms
 - Search Algorithms
 - Sort Algorithms
 

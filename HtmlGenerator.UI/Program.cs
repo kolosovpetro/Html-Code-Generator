@@ -164,7 +164,41 @@ namespace HtmlGenerator.UI
                 Titles.BstAlgorithms.Transplant,
                 Snippet.BstAlgorithms.Transplant);
             bstAlgorithms.AddChild(bstTransplant);
-
+            
+            // heap algorithms
+            IEntity heapAlgorithms = new MenuEntity(Path.HeapAlgorithms.Root, Titles.HeapAlgorithms.RootTitle);
+            treeAlgorithms.AddChild(heapAlgorithms);
+            
+            IEntity heapPush = new PageEntity(Path.HeapAlgorithms.HeapPush,
+                Titles.HeapAlgorithms.HeapPush,
+                Snippet.HeapAlgorithms.HeapPush);
+            heapAlgorithms.AddChild(heapPush);
+            
+            IEntity heapPop = new PageEntity(Path.HeapAlgorithms.HeapPop,
+                Titles.HeapAlgorithms.HeapPop,
+                Snippet.HeapAlgorithms.HeapPop);
+            heapAlgorithms.AddChild(heapPop);
+            
+            IEntity heapCalculateUp = new PageEntity(Path.HeapAlgorithms.HeapCalculateUp,
+                Titles.HeapAlgorithms.HeapCalculateUp,
+                Snippet.HeapAlgorithms.HeapCalculateUp);
+            heapAlgorithms.AddChild(heapCalculateUp);
+            
+            IEntity heapCalculateDown = new PageEntity(Path.HeapAlgorithms.HeapCalculateDown,
+                Titles.HeapAlgorithms.HeapCalculateDown,
+                Snippet.HeapAlgorithms.HeapCalculateDown);
+            heapAlgorithms.AddChild(heapCalculateDown);
+            
+            IEntity floydHeapify = new PageEntity(Path.HeapAlgorithms.FloydAlgorithm,
+                Titles.HeapAlgorithms.FloydAlgorithm,
+                Snippet.HeapAlgorithms.FloydAlgorithm);
+            heapAlgorithms.AddChild(floydHeapify);
+            
+            IEntity heapSort = new PageEntity(Path.HeapAlgorithms.HeapSort,
+                Titles.HeapAlgorithms.HeapSort,
+                Snippet.HeapAlgorithms.HeapSort);
+            heapAlgorithms.AddChild(heapSort);
+            
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

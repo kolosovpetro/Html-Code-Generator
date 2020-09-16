@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Algorithms and Data Structures in C#Tree Algorithms</title>
+<title>Algorithms and Data Structures in C#Heap Calculate Up</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,11 +16,21 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Tree Algorithms</h2>
+<h2>Heap Calculate Up</h2>
 <ul>
-<li><a href="BinaryTreeAlgorithms/index.htm">BinaryTreeAlgorithms/</li>
-<li><a href="BinarySearchTreeAlgorithms/index.htm">BinarySearchTreeAlgorithms/</li>
-<li><a href="HeapAlgorithms/index.htm">HeapAlgorithms/</li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public virtual void CalculateUp(int elementIndex)
+{
+    if (elementIndex == 0) return;
+    var parentIndex = ParentIndex(elementIndex);
+    if (HeapBase[parentIndex] > HeapBase[elementIndex]) return;
+    Swap(elementIndex, parentIndex);
+    CalculateUp(parentIndex);
+}
+</code></pre>
+</div>
 </body>
 </html>

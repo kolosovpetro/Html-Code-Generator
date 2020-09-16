@@ -22,7 +22,7 @@
 
         public static class HeapAlgorithms
         {
-            public const string RootTitle = "HeapAlgorithms/";
+            public const string Root = "HeapAlgorithms/";
             public const string HeapPush = "HeapPush/";
             public const string HeapPop = "HeapPop/";
             public const string HeapCalculateUp = "HeapCalculateUp/";

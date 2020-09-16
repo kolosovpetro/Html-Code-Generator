@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Binary Tree Algorithms</title>
+<title>Simple Linear Search</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Algorithms and Data Structures in C#">
 <meta name="author" content="Petro Kolosov">
@@ -16,19 +16,29 @@
 </head>
 <body class="compScience">
 <h1>Algorithms and Data Structures in C#</h1>
-<h2>Binary Tree Algorithms</h2>
+<h2>Simple Linear Search</h2>
 <ul>
-<li><a href="PostOrderTraversalIterative/">Post Order Traversal Iterative</li>
-<li><a href="InOrderTraversalIterative/">In Order Traversal Iterative</li>
-<li><a href="InOrderTraversalRecursive/">In Order Traversal Recursive</li>
-<li><a href="OutOrderTraversalRecursive/">Out Order Traversal Recursive</li>
-<li><a href="PostOrderTraversalIterative/">Post Order Traversal Iterative</li>
-<li><a href="PostOrderTraversalRecursive/">Post Order Traversal Recursive</li>
-<li><a href="PreOrderTraversalIterative/">Pre Order Traversal Iterative</li>
-<li><a href="PreOrderTraversalRecursive/">Pre Order Traversal Recursive</li>
-<li><a href="Depth/">Depth</li>
-<li><a href="Height/">Height</li>
 <li><a href="../">Back</a></li>
 </ul>
+<h3>Code snippet</h3>
+<div class="common">
+<pre><code class="csharp">
+public class SimpleLinearSearch : ISearchAlgorithm
+{
+    public bool Contains(int[] array, int searchValue)
+    {
+        var contains = false;
+
+        foreach (var t in array)
+        {
+            if (t == searchValue) 
+                contains = true;
+        }
+
+        return contains;
+    }
+}
+</code></pre>
+</div>
 </body>
 </html>

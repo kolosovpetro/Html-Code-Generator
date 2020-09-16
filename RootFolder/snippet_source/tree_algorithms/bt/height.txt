@@ -1,0 +1,12 @@
+public int Height(IBinaryTree<T> binaryTree)
+{
+    if (IsExternal(binaryTree)) return 0;
+    var height = 0;
+
+    if (binaryTree.HasLeft)
+        height = height > Height(binaryTree.Left) ? height : Height(binaryTree.Left);
+    if (binaryTree.HasRight)
+        height = height > Height(binaryTree.Right) ? height : Height(binaryTree.Right);
+
+    return height + 1;
+}

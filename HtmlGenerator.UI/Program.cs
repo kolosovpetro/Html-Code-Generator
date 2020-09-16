@@ -11,36 +11,64 @@ namespace HtmlGenerator.UI
     {
         private static void Main()
         {
+            // root
             IEntity root = new MenuEntity(Path.MainRoot, Titles.MainTitle);
 
-            // algorithms branch
-            IEntity algorithms = new MenuEntity(Path.ClassicalAlgorithms.Root, Titles.ClassicalAlgorithms.Root);
-            root.AddChild(algorithms);
+            // classical algorithms branch
+            IEntity classicalAlgorithms =
+                new MenuEntity(Path.ClassicalAlgorithms.Root, Titles.ClassicalAlgorithms.Root);
+            root.AddChild(classicalAlgorithms);
 
             IEntity sieve = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes,
                 Titles.ClassicalAlgorithms.SieveOfEratosthenes,
                 Snippet.ClassicalAlgorithms.SieveSource);
-            algorithms.AddChild(sieve);
+            classicalAlgorithms.AddChild(sieve);
 
             IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd,
                 Titles.ClassicalAlgorithms.EuclideanGcd,
                 Snippet.ClassicalAlgorithms.EuclideanGcd);
-            algorithms.AddChild(euclideanGcd);
+            classicalAlgorithms.AddChild(euclideanGcd);
 
             IEntity kadaneAlgorithm =
                 new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithms, Titles.ClassicalAlgorithms.KadaneAlgorithm,
                     Snippet.ClassicalAlgorithms.KadaneAlgorithm);
-            algorithms.AddChild(kadaneAlgorithm);
+            classicalAlgorithms.AddChild(kadaneAlgorithm);
 
             IEntity maximumSubarraySum = new PageEntity(Path.ClassicalAlgorithms.MaximumSubarraySum,
                 Titles.ClassicalAlgorithms.MaximumSubarraySum,
                 Snippet.ClassicalAlgorithms.MaximumSubarraySum);
-            algorithms.AddChild(maximumSubarraySum);
+            classicalAlgorithms.AddChild(maximumSubarraySum);
 
             IEntity shuntingYard = new PageEntity(Path.ClassicalAlgorithms.ShuntingYard,
                 Titles.ClassicalAlgorithms.ShuntingYard,
                 Snippet.ClassicalAlgorithms.ShuntingYard);
-            algorithms.AddChild(shuntingYard);
+            classicalAlgorithms.AddChild(shuntingYard);
+
+            // search algorithms branch
+            IEntity searchAlgorithms = new MenuEntity(Path.SearchAlgorithms.Root, Titles.SortAlgorithms.RootTitle);
+            root.AddChild(searchAlgorithms);
+
+            IEntity simpleLinearSearch = new PageEntity(Path.SearchAlgorithms.SimpleLinearSearch,
+                Titles.SearchAlgorithms.SimpleLinearSearch,
+                Snippet.SearchAlgorithms.SimpleLinearSearch);
+            searchAlgorithms.AddChild(simpleLinearSearch);
+
+            IEntity improvedLinearSearch = new PageEntity(Path.SearchAlgorithms.ImproveLinearSearch,
+                Titles.SearchAlgorithms.ImproveLinearSearch,
+                Snippet.SearchAlgorithms.ImproveLinearSearch);
+            searchAlgorithms.AddChild(improvedLinearSearch);
+
+            IEntity improvedLinearSearchWithSentinel = new PageEntity(
+                Path.SearchAlgorithms.ImproveLinearSearchWithSentinel,
+                Titles.SearchAlgorithms.ImproveLinearSearchWithSentinel,
+                Snippet.SearchAlgorithms.ImproveLinearSearchWithSentinel);
+            searchAlgorithms.AddChild(improvedLinearSearchWithSentinel);
+
+            IEntity binarySearch = new PageEntity(Path.SearchAlgorithms.BinarySearch,
+                Titles.SearchAlgorithms.BinarySearch,
+                Snippet.SearchAlgorithms.BinarySearch);
+            searchAlgorithms.AddChild(binarySearch);
+
 
             // sort algorithms branch
             IEntity sortAlgorithms = new MenuEntity(Path.SortAlgorithms.Root, Titles.SortAlgorithms.RootTitle);
@@ -120,6 +148,16 @@ namespace HtmlGenerator.UI
                 Titles.BtAlgorithms.PreOrderRecursive,
                 Snippet.BtAlgorithms.PreOrderRecursive);
             binaryTreeAlgorithms.AddChild(preOrderRecursive);
+
+            IEntity btDepth = new PageEntity(Path.BtAlgorithms.Depth,
+                Titles.BtAlgorithms.Depth,
+                Snippet.BtAlgorithms.Depth);
+            binaryTreeAlgorithms.AddChild(btDepth);
+
+            IEntity btHeight = new PageEntity(Path.BtAlgorithms.Height,
+                Titles.BtAlgorithms.Height,
+                Snippet.BtAlgorithms.Height);
+            binaryTreeAlgorithms.AddChild(btHeight);
 
             // binary search tree algorithms
             IEntity bstAlgorithms = new MenuEntity(Path.BstAlgorithms.Root, Titles.BstAlgorithms.Root);
@@ -207,22 +245,22 @@ namespace HtmlGenerator.UI
                 Titles.GraphAlgorithms.BreadthFirst,
                 Snippet.GraphAlgorithms.BreadthFirst);
             graphAlgorithms.AddChild(graphBreadthFirst);
-            
+
             IEntity graphDepthFirstIterative = new PageEntity(Path.GraphAlgorithms.DepthFirstIterative,
                 Titles.GraphAlgorithms.DepthFirstIterative,
                 Snippet.GraphAlgorithms.DepthFirstIterative);
             graphAlgorithms.AddChild(graphDepthFirstIterative);
-            
+
             IEntity graphDepthFirstRecursive = new PageEntity(Path.GraphAlgorithms.DepthFirstRecursive,
                 Titles.GraphAlgorithms.DepthFirstRecursive,
                 Snippet.GraphAlgorithms.DepthFirstRecursive);
             graphAlgorithms.AddChild(graphDepthFirstRecursive);
-            
+
             IEntity dijkstraAlgorithm = new PageEntity(Path.GraphAlgorithms.DijkstraAlgorithm,
                 Titles.GraphAlgorithms.DijkstraAlgorithm,
                 Snippet.GraphAlgorithms.DijkstraAlgorithm);
             graphAlgorithms.AddChild(dijkstraAlgorithm);
-            
+
             IEntity kahnAlgorithm = new PageEntity(Path.GraphAlgorithms.KahnAlgorithm,
                 Titles.GraphAlgorithms.KahnAlgorithm,
                 Snippet.GraphAlgorithms.KahnAlgorithm);

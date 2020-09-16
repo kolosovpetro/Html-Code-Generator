@@ -92,6 +92,7 @@
             public const string SimpleLinearSearch = "SimpleLinearSearch/";
             public const string ImproveLinearSearch = "ImprovedLinearSearch/";
             public const string ImproveLinearSearchWithSentinel = "ImprovedLinearSearchWithSentinel/";
+            public const string BinarySearch = "BinarySearch/";
         }
     }
 }

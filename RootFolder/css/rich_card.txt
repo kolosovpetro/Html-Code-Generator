@@ -1,3 +1,4 @@
+yield return "<html prefix=\"og: http://ogp.me/ns#\">"
 yield return "<meta name=\"twitter:card\" content=\"Algorithms and Data Structures in C#\" />";
 yield return "<meta name=\"twitter:site\" content=\"https://kolosovpetro.github.io/Html-Code-Generator/RootFolder/\" />";
 yield return "<meta name=\"twitter:title\" content=\"Algorithms and Data Structures in C#\" />";

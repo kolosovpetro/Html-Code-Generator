@@ -15,14 +15,6 @@ namespace HtmlGenerator.Presets.Presets
             yield return $"<h1>{Title.MainRoot}</h1>";
             yield return $"<h2>{subtitle}</h2>";
         }
-        
-        public static IEnumerable<string> BodyStart(string subtitle, string description)
-        {
-            yield return "<body class=\"compScience\">";
-            yield return $"<h1>{Title.MainRoot}</h1>";
-            yield return $"<h2>{subtitle}</h2>";
-            yield return $"<h3>Description: {description}</h3>";
-        }
 
         public static IEnumerable<string> GenerateLinks(IEntity entity)
         {

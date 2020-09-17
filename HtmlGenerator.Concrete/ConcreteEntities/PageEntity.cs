@@ -15,15 +15,7 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
         public string Path { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
-        public string Description { get; }
-
-        public PageEntity(string directoryName, string subTitle, string snippetPath)
-        {
-            SnippetPath = snippetPath;
-            DirectoryName = directoryName;
-            SubTitle = subTitle;
-            Title = subTitle;
-        }
+        private string Description { get; }
 
         public PageEntity(string directoryName, string subTitle, string snippetPath, string description)
         {

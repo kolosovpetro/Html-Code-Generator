@@ -9,6 +9,7 @@ namespace HtmlGenerator.Concrete.Tests.Tests
     [TestFixture]
     public class MenuEntityTests
     {
+        [Test]
         public void Menu_Entity_Test()
         {
             IEntity root = new MenuEntity(Path.MainRoot);

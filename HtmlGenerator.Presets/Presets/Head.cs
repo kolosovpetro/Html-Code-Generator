@@ -16,8 +16,7 @@ namespace HtmlGenerator.Presets.Presets
             yield return "<meta name=\"author\" content=\"Petro Kolosov\">";
             yield return "<meta name=\"keywords\" content=\"Data structures, Algorithms\">";
             yield return "<meta name=\"revisit-after\" content=\"3 days\">";
-            yield return "<meta name=\"twitter:card\" content=\"Algorithms and Data Structures in C#\" />";
-            yield return "<meta name=\"twitter:site\" content=\"https://kolosovpetro.github.io/Html-Code-Generator/RootFolder/\" />";
+            yield return "<meta name=\"twitter:site\" content=\"https://kolosovpetro.github.io/Html-Code-Generator/RootFolder\" />";
             yield return "<meta name=\"twitter:title\" content=\"Algorithms and Data Structures in C#\" />";
             yield return "<meta name=\"twitter:description\" content=\"Web-site dedicated to study of Algorithms and Data Structures. All Examples are in C#.\" />";
             yield return $"<meta name=\"twitter:image\" content=\"{Domain.MainDomain}css/card_image.jpg\" />";

@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms
 {
-    public class ImprovedLinearSearchWithSentinel : IPageParameter
+    public class ImprovedLinearSearchWithSentinelParameter : IPageParameter
     {
         public string DirectoryName => Path.SearchAlgorithms.ImprovedLinearSearchWithSentinel;
         public string SubTitle => Title.SearchAlgorithms.ImprovedLinearSearchWithSentinel;

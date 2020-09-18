@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms
 {
-    public class BinarySearch : IPageParameter
+    public class BinarySearchParameter : IPageParameter
     {
         public string DirectoryName => Path.SearchAlgorithms.BinarySearch;
         public string SubTitle => Title.SearchAlgorithms.BinarySearch;

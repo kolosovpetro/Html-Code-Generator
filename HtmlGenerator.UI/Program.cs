@@ -5,6 +5,7 @@ using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
@@ -34,28 +35,12 @@ namespace HtmlGenerator.UI
             IEntity searchAlgorithms = new MenuEntity(new SearchAlgorithmsParameter());
             root.AddChild(searchAlgorithms);
 
-            IEntity simpleLinearSearch = new PageEntity(Path.SearchAlgorithms.SimpleLinearSearch,
-                Title.SearchAlgorithms.SimpleLinearSearch,
-                Snippet.SearchAlgorithms.SimpleLinearSearch, Description.SearchAlgorithms.SimpleLinearSearch);
-            searchAlgorithms.AddChild(simpleLinearSearch);
-
-            IEntity improvedLinearSearch = new PageEntity(Path.SearchAlgorithms.ImprovedLinearSearch,
-                Title.SearchAlgorithms.ImprovedLinearSearch,
-                Snippet.SearchAlgorithms.ImprovedLinearSearch, Description.SearchAlgorithms.ImprovedLinearSearch);
-            searchAlgorithms.AddChild(improvedLinearSearch);
-
-            IEntity improvedLinearSearchWithSentinel = new PageEntity(
-                Path.SearchAlgorithms.ImprovedLinearSearchWithSentinel,
-                Title.SearchAlgorithms.ImprovedLinearSearchWithSentinel,
-                Snippet.SearchAlgorithms.ImprovedLinearSearchWithSentinel,
-                Description.SearchAlgorithms.ImprovedLinearSearchWithSentinel);
-            searchAlgorithms.AddChild(improvedLinearSearchWithSentinel);
-
-            IEntity binarySearch = new PageEntity(Path.SearchAlgorithms.BinarySearch,
-                Title.SearchAlgorithms.BinarySearch,
-                Snippet.SearchAlgorithms.BinarySearch, Description.SearchAlgorithms.BinarySearch);
-            searchAlgorithms.AddChild(binarySearch);
-
+            IEntity simpleLinearSearch = new PageEntity(new SimpleLinearSearchParameter());
+            IEntity improvedLinearSearch = new PageEntity(new ImprovedLinearSearchParameter());
+            IEntity improvedLinearSearchWithSentinel = new PageEntity(new ImprovedLinearSearchWithSentinelParameter());
+            IEntity binarySearch = new PageEntity(new BinarySearchParameter());
+            searchAlgorithms.AddChildRange(simpleLinearSearch, improvedLinearSearch, improvedLinearSearchWithSentinel,
+                binarySearch);
 
             // sort algorithms branch
             IEntity sortAlgorithms = new MenuEntity(new SortAlgorithmsParameter());

@@ -10,7 +10,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Parameters\Page\GraphAlgorithms" />
       <Folder Include="Parameters\Page\SortAlgorithms" />
     </ItemGroup>
 

@@ -9,9 +9,7 @@ using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.HeapAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.SortAlgorithms;
-using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
-using Path = HtmlGenerator.Routes.Route.Path;
 
 namespace HtmlGenerator.UI
 {
@@ -116,7 +114,8 @@ namespace HtmlGenerator.UI
             IEntity graphDepthFirstRecursive = new PageEntity(new GraphDepthFirstRecursiveParameter());
             IEntity dijkstraAlgorithm = new PageEntity(new GraphDijkstraAlgorithmParameter());
             IEntity kahnAlgorithm = new PageEntity(new GraphKahnAlgorithmParameter());
-            graphAlgorithms.AddChildRange(graphBreadthFirst, graphDepthFirstIterative, graphDepthFirstRecursive, dijkstraAlgorithm, kahnAlgorithm);
+            graphAlgorithms.AddChildRange(graphBreadthFirst, graphDepthFirstIterative, graphDepthFirstRecursive, 
+                dijkstraAlgorithm, kahnAlgorithm);
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

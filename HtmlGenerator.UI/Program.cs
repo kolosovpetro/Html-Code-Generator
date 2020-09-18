@@ -237,19 +237,13 @@ namespace HtmlGenerator.UI
             IEntity graphDepthFirstIterative = new PageEntity(new GraphDepthFirstIterativeParameter());
             graphAlgorithms.AddChild(graphDepthFirstIterative);
 
-            IEntity graphDepthFirstRecursive = new PageEntity(Path.GraphAlgorithms.DepthFirstRecursive,
-                Title.GraphAlgorithms.DepthFirstRecursive,
-                Snippet.GraphAlgorithms.DepthFirstRecursive, Description.GraphAlgorithms.DepthFirstRecursive);
+            IEntity graphDepthFirstRecursive = new PageEntity(new GraphDepthFirstRecursiveParameter());
             graphAlgorithms.AddChild(graphDepthFirstRecursive);
 
-            IEntity dijkstraAlgorithm = new PageEntity(Path.GraphAlgorithms.DijkstraAlgorithm,
-                Title.GraphAlgorithms.DijkstraAlgorithm,
-                Snippet.GraphAlgorithms.DijkstraAlgorithm, Description.GraphAlgorithms.DijkstraAlgorithm);
+            IEntity dijkstraAlgorithm = new PageEntity(new GraphDijkstraAlgorithmParameter());
             graphAlgorithms.AddChild(dijkstraAlgorithm);
 
-            IEntity kahnAlgorithm = new PageEntity(Path.GraphAlgorithms.KahnAlgorithm,
-                Title.GraphAlgorithms.KahnAlgorithm,
-                Snippet.GraphAlgorithms.KahnAlgorithm, Description.GraphAlgorithms.KahnAlgorithm);
+            IEntity kahnAlgorithm = new PageEntity(new GraphKahnAlgorithmParameter());
             graphAlgorithms.AddChild(kahnAlgorithm);
 
             ConcreteService.CreateFiles(root);

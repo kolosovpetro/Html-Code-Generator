@@ -22,14 +22,6 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             Path = Parent?.Path + directoryName;
         }
 
-        public MenuEntity(string directoryName, string subTitle)
-        {
-            DirectoryName = directoryName;
-            SubTitle = subTitle;
-            Title = subTitle;
-            Path = Parent?.Path + directoryName;
-        }
-
         public MenuEntity(IMenuParameter parameter)
         {
             DirectoryName = parameter.DirectoryName;
@@ -43,6 +35,11 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             ChildObjects.Add(entity);
             entity.Parent = this;
             entity.Path = Path + entity.DirectoryName;
+        }
+
+        public void AddChildRange(params IEntity[] entities)
+        {
+            foreach (var e in entities) AddChild(e);
         }
 
         public void Commit()

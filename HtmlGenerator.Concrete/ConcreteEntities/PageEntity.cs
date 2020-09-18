@@ -42,6 +42,11 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             entity.Path = Path + entity.DirectoryName;
         }
 
+        public void AddChildRange(params IEntity[] entities)
+        {
+            foreach (var e in entities) AddChild(e);
+        }
+
         public void Commit()
         {
             FolderService.Create(Path);

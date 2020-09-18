@@ -35,8 +35,16 @@ namespace HtmlGenerator.Abstractions.Interfaces
         /// Title h2.
         /// </summary>
         string SubTitle { get; set; }
-
+        
+        /// <summary>
+        /// Adds new child entity to current
+        /// </summary>
         void AddChild(IEntity entity);
+
+        /// <summary>
+        /// Adds a range of child entities to current
+        /// </summary>
+        void AddChildRange(params IEntity[] entities);
 
         /// <summary>
         /// Generates new file at folder debug/Path + Directory/FileName;

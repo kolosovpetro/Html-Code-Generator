@@ -3,6 +3,7 @@ using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
 using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.GraphAlgorithms;
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
@@ -230,14 +231,10 @@ namespace HtmlGenerator.UI
             IEntity graphAlgorithms = new MenuEntity(new GraphAlgorithmsParameter());
             root.AddChild(graphAlgorithms);
 
-            IEntity graphBreadthFirst = new PageEntity(Path.GraphAlgorithms.BreadthFirst,
-                Title.GraphAlgorithms.BreadthFirst,
-                Snippet.GraphAlgorithms.BreadthFirst, Description.GraphAlgorithms.BreadthFirst);
+            IEntity graphBreadthFirst = new PageEntity(new GraphBreadthFirstParameter());
             graphAlgorithms.AddChild(graphBreadthFirst);
 
-            IEntity graphDepthFirstIterative = new PageEntity(Path.GraphAlgorithms.DepthFirstIterative,
-                Title.GraphAlgorithms.DepthFirstIterative,
-                Snippet.GraphAlgorithms.DepthFirstIterative, Description.GraphAlgorithms.DepthFirstIterative);
+            IEntity graphDepthFirstIterative = new PageEntity(new GraphDepthFirstIterativeParameter());
             graphAlgorithms.AddChild(graphDepthFirstIterative);
 
             IEntity graphDepthFirstRecursive = new PageEntity(Path.GraphAlgorithms.DepthFirstRecursive,

@@ -6,8 +6,8 @@ namespace HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms
     public class BinaryTreeInOrderIterativeParameter : IPageParameter
     {
         public string DirectoryName => Path.BinaryTreeAlgorithms.InOrderIterative;
-        public string SubTitle => Path.BinaryTreeAlgorithms.InOrderIterative;
-        public string SnippetPath => Snippet.BtAlgorithms.InOrderIterative;
+        public string SubTitle => Title.BinaryTreeAlgorithms.InOrderIterative;
+        public string SnippetPath => Snippet.BinaryTreeAlgorithms.InOrderIterative;
         public string Description => Routes.Route.Description.BinaryTreeAlgorithms.InOrderIterative;
     }
 }

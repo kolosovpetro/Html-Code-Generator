@@ -84,7 +84,7 @@
             public const string Transplant = Path.MainRoot + "snippet_source/tree_algorithms/bst/bst_transplant.txt";
         }
 
-        public static class BtAlgorithms
+        public static class BinaryTreeAlgorithms
         {
             public const string ExpressionTree =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/expression_tree.txt";

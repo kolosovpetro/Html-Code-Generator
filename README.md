@@ -29,6 +29,7 @@ Every algorithm present on the site may be found in respected repository:
 - ~~Add algorithm source link to github~~ (done)
 - ~~Add Search Algorithms~~ (done)
 - Add Data Structures, very simple and short implementations
+- Add Design Patterns, very simple and short implementations
 - Add required keywords for SEO
 - Modify title in order to be SEO friendly
 - Index page in google search console

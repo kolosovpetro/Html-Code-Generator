@@ -62,10 +62,10 @@
             public const string SimpleLinearSearch =
                 Path.MainRoot + "snippet_source/search_algorithms/simple_linear_search.txt";
 
-            public const string ImproveLinearSearch =
+            public const string ImprovedLinearSearch =
                 Path.MainRoot + "snippet_source/search_algorithms/improved_linear_search.txt";
 
-            public const string ImproveLinearSearchWithSentinel =
+            public const string ImprovedLinearSearchWithSentinel =
                 Path.MainRoot + "snippet_source/search_algorithms/improved_linear_search_with_sentinel.txt";
 
             public const string BinarySearch =

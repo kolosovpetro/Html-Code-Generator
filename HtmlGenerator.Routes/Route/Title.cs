@@ -90,8 +90,8 @@
         {
             public const string Root = "Search Algorithms";
             public const string SimpleLinearSearch = "Simple Linear Search";
-            public const string ImproveLinearSearch = "Improved Linear Search";
-            public const string ImproveLinearSearchWithSentinel = "Improved Linear Search With Sentinel";
+            public const string ImprovedLinearSearch = "Improved Linear Search";
+            public const string ImprovedLinearSearchWithSentinel = "Improved Linear Search With Sentinel";
             public const string BinarySearch = "Binary Search";
         }
     }

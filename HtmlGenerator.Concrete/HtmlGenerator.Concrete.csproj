@@ -9,4 +9,8 @@
       <ProjectReference Include="..\HtmlGenerator.Services\HtmlGenerator.Services.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Parameters\Page" />
+    </ItemGroup>
+
 </Project>

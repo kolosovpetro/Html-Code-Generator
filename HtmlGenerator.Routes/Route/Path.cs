@@ -31,7 +31,7 @@
             public const string HeapSort = "HeapSort/";
         }
 
-        public static class BtAlgorithms
+        public static class BinaryTreeAlgorithms
         {
             public const string Root = "BinaryTreeAlgorithms/";
             public const string ExpressionTree = "ExpressionTree/";
@@ -47,7 +47,7 @@
             public const string Depth = "Depth/";
         }
 
-        public static class BstAlgorithms
+        public static class BinarySearchtAlgorithms
         {
             public const string Root = "BinarySearchTreeAlgorithms/";
             public const string Insert = "Insert/";

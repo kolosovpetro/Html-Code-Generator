@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms
 {
-    public class SieveOfEratosthenes : IPageParameter
+    public class SieveOfEratosthenesParameter : IPageParameter
     {
         public string DirectoryName => Path.ClassicalAlgorithms.SieveOfEratosthenes;
         public string SubTitle => Title.ClassicalAlgorithms.SieveOfEratosthenes;

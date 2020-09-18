@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms
 {
-    public class MaximumSubarraySum : IPageParameter
+    public class MaximumSubarraySumParameter : IPageParameter
     {
         public string DirectoryName => Path.ClassicalAlgorithms.MaximumSubarraySum;
         public string SubTitle => Title.ClassicalAlgorithms.MaximumSubarraySum;

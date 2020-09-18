@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms
 {
-    public class KadaneAlgorithm : IPageParameter
+    public class KadaneAlgorithmParameter : IPageParameter
     {
         public string DirectoryName => Path.ClassicalAlgorithms.KadaneAlgorithm;
         public string SubTitle => Title.ClassicalAlgorithms.KadaneAlgorithm;

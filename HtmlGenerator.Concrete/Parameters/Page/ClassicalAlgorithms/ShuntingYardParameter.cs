@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms
 {
-    public class ShuntingYard : IPageParameter
+    public class ShuntingYardParameter : IPageParameter
     {
         public string DirectoryName => Path.ClassicalAlgorithms.ShuntingYard;
         public string SubTitle => Title.ClassicalAlgorithms.ShuntingYard;

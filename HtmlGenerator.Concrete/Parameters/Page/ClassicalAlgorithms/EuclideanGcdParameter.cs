@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms
 {
-    public class EuclideanGcd : IPageParameter
+    public class EuclideanGcdParameter : IPageParameter
     {
         public string DirectoryName => Path.ClassicalAlgorithms.EuclideanGcd;
         public string SubTitle => Title.ClassicalAlgorithms.EuclideanGcd;

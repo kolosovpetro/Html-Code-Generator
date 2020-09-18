@@ -4,6 +4,7 @@ using HtmlGenerator.Concrete.ConcreteEntities;
 using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
@@ -21,30 +22,13 @@ namespace HtmlGenerator.UI
             IEntity classicalAlgorithms = new MenuEntity(new ClassicalAlgorithmsParameter());
             root.AddChild(classicalAlgorithms);
 
-            IEntity sieveOfEratosthenes = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes,
-                Title.ClassicalAlgorithms.SieveOfEratosthenes,
-                Snippet.ClassicalAlgorithms.SieveOfEratosthenes, Description.ClassicalAlgorithms.SieveOfEratosthenes);
-            classicalAlgorithms.AddChild(sieveOfEratosthenes);
-
-            IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd,
-                Title.ClassicalAlgorithms.EuclideanGcd,
-                Snippet.ClassicalAlgorithms.EuclideanGcd, Description.ClassicalAlgorithms.EuclideanGcd);
-            classicalAlgorithms.AddChild(euclideanGcd);
-
-            IEntity kadaneAlgorithm =
-                new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithm, Title.ClassicalAlgorithms.KadaneAlgorithm,
-                    Snippet.ClassicalAlgorithms.KadaneAlgorithm, Description.ClassicalAlgorithms.KadaneAlgorithm);
-            classicalAlgorithms.AddChild(kadaneAlgorithm);
-
-            IEntity maximumSubarraySum = new PageEntity(Path.ClassicalAlgorithms.MaximumSubarraySum,
-                Title.ClassicalAlgorithms.MaximumSubarraySum,
-                Snippet.ClassicalAlgorithms.MaximumSubarraySum, Description.ClassicalAlgorithms.MaximumSubarraySum);
-            classicalAlgorithms.AddChild(maximumSubarraySum);
-
-            IEntity shuntingYard = new PageEntity(Path.ClassicalAlgorithms.ShuntingYard,
-                Title.ClassicalAlgorithms.ShuntingYard,
-                Snippet.ClassicalAlgorithms.ShuntingYard, Description.ClassicalAlgorithms.ShuntingYard);
-            classicalAlgorithms.AddChild(shuntingYard);
+            IEntity sieveOfEratosthenes = new PageEntity(new SieveOfEratosthenesParameter());
+            IEntity euclideanGcd = new PageEntity(new EuclideanGcdParameter());
+            IEntity kadaneAlgorithm = new PageEntity(new KadaneAlgorithmParameter());
+            IEntity maximumSubarraySum = new PageEntity(new MaximumSubarraySumParameter());
+            IEntity shuntingYard = new PageEntity(new ShuntingYardParameter());
+            classicalAlgorithms.AddChildRange(sieveOfEratosthenes, euclideanGcd, kadaneAlgorithm,
+                maximumSubarraySum, shuntingYard);
 
             // search algorithms branch
             IEntity searchAlgorithms = new MenuEntity(new SearchAlgorithmsParameter());

@@ -232,20 +232,11 @@ namespace HtmlGenerator.UI
             root.AddChild(graphAlgorithms);
 
             IEntity graphBreadthFirst = new PageEntity(new GraphBreadthFirstParameter());
-            graphAlgorithms.AddChild(graphBreadthFirst);
-
             IEntity graphDepthFirstIterative = new PageEntity(new GraphDepthFirstIterativeParameter());
-            graphAlgorithms.AddChild(graphDepthFirstIterative);
-
             IEntity graphDepthFirstRecursive = new PageEntity(new GraphDepthFirstRecursiveParameter());
-            graphAlgorithms.AddChild(graphDepthFirstRecursive);
-
             IEntity dijkstraAlgorithm = new PageEntity(new GraphDijkstraAlgorithmParameter());
-            graphAlgorithms.AddChild(dijkstraAlgorithm);
-
             IEntity kahnAlgorithm = new PageEntity(new GraphKahnAlgorithmParameter());
-            graphAlgorithms.AddChild(kahnAlgorithm);
-
+            graphAlgorithms.AddChildRange(graphBreadthFirst, graphDepthFirstIterative, graphDepthFirstRecursive, dijkstraAlgorithm, kahnAlgorithm);
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

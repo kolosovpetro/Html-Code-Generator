@@ -5,6 +5,7 @@ using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.HeapAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
@@ -113,35 +114,14 @@ namespace HtmlGenerator.UI
             IEntity heapAlgorithms = new MenuEntity(new HeapAlgorithmsParameter());
             treeAlgorithms.AddChild(heapAlgorithms);
 
-            IEntity heapPush = new PageEntity(Path.HeapAlgorithms.HeapPush,
-                Title.HeapAlgorithms.HeapPush,
-                Snippet.HeapAlgorithms.HeapPush, Description.HeapAlgorithms.HeapPush);
-            heapAlgorithms.AddChild(heapPush);
-
-            IEntity heapPop = new PageEntity(Path.HeapAlgorithms.HeapPop,
-                Title.HeapAlgorithms.HeapPop,
-                Snippet.HeapAlgorithms.HeapPop, Description.HeapAlgorithms.HeapPop);
-            heapAlgorithms.AddChild(heapPop);
-
-            IEntity heapCalculateUp = new PageEntity(Path.HeapAlgorithms.HeapCalculateUp,
-                Title.HeapAlgorithms.HeapCalculateUp,
-                Snippet.HeapAlgorithms.HeapCalculateUp, Description.HeapAlgorithms.HeapCalculateUp);
-            heapAlgorithms.AddChild(heapCalculateUp);
-
-            IEntity heapCalculateDown = new PageEntity(Path.HeapAlgorithms.HeapCalculateDown,
-                Title.HeapAlgorithms.HeapCalculateDown,
-                Snippet.HeapAlgorithms.HeapCalculateDown, Description.HeapAlgorithms.HeapCalculateDown);
-            heapAlgorithms.AddChild(heapCalculateDown);
-
-            IEntity floydHeapify = new PageEntity(Path.HeapAlgorithms.FloydAlgorithm,
-                Title.HeapAlgorithms.FloydAlgorithm,
-                Snippet.HeapAlgorithms.FloydAlgorithm, Description.HeapAlgorithms.FloydAlgorithm);
-            heapAlgorithms.AddChild(floydHeapify);
-
-            IEntity heapSort = new PageEntity(Path.HeapAlgorithms.HeapSort,
-                Title.HeapAlgorithms.HeapSort,
-                Snippet.HeapAlgorithms.HeapSort, Description.HeapAlgorithms.HeapSort);
-            heapAlgorithms.AddChild(heapSort);
+            IEntity heapPush = new PageEntity(new HeapPushParamter());
+            IEntity heapPop = new PageEntity(new HeapPopParameter());
+            IEntity heapCalculateUp = new PageEntity(new HeapCalculateUpParameter());
+            IEntity heapCalculateDown = new PageEntity(new HeapCalculateDownParameter());
+            IEntity floydHeapify = new PageEntity(new FloydHeapifyParameter());
+            IEntity heapSort = new PageEntity(new HeapSortParameter());
+            heapAlgorithms.AddChildRange(heapPush, heapPop, heapCalculateUp,
+                heapCalculateDown, floydHeapify, heapSort);
 
             // graph algorithms
             IEntity graphAlgorithms = new MenuEntity(new GraphAlgorithmsParameter());

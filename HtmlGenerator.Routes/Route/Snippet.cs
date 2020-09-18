@@ -72,7 +72,7 @@
                 Path.MainRoot + "snippet_source/search_algorithms/binary_search.txt";
         }
 
-        public static class BstAlgorithms
+        public static class BinarySearchTreeAlgorithms
         {
             public const string Insert = Path.MainRoot + "snippet_source/tree_algorithms/bst/bst_insert.txt";
             public const string Search = Path.MainRoot + "snippet_source/tree_algorithms/bst/bst_search.txt";

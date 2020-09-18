@@ -10,7 +10,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Parameters\Page" />
+      <Folder Include="Parameters\Page\BinaryTreeAlgorithms" />
+      <Folder Include="Parameters\Page\ClassicalAlgorithms" />
+      <Folder Include="Parameters\Page\GraphAlgorithms" />
+      <Folder Include="Parameters\Page\HeapAlgorithms" />
+      <Folder Include="Parameters\Page\SearchAlgorithms" />
+      <Folder Include="Parameters\Page\SortAlgorithms" />
     </ItemGroup>
 
 </Project>

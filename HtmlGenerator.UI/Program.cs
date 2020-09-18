@@ -171,38 +171,38 @@ namespace HtmlGenerator.UI
             treeAlgorithms.AddChild(bstAlgorithms);
 
             IEntity bstInsert = new PageEntity(Path.BinarySearchtAlgorithms.Insert,
-                Title.BstAlgorithms.Insert,
-                Snippet.BstAlgorithms.Insert, Description.BstAlgorithms.Insert);
+                Title.BinarySerachTreeAlgorithms.Insert,
+                Snippet.BinarySearchTreeAlgorithms.Insert, Description.BinarySearchTreeAlgorithms.Insert);
             bstAlgorithms.AddChild(bstInsert);
 
             IEntity bstDelete = new PageEntity(Path.BinarySearchtAlgorithms.Delete,
-                Title.BstAlgorithms.Delete,
-                Snippet.BstAlgorithms.Delete, Description.BstAlgorithms.Delete);
+                Title.BinarySerachTreeAlgorithms.Delete,
+                Snippet.BinarySearchTreeAlgorithms.Delete, Description.BinarySearchTreeAlgorithms.Delete);
             bstAlgorithms.AddChild(bstDelete);
 
             IEntity bstMax = new PageEntity(Path.BinarySearchtAlgorithms.Max,
-                Title.BstAlgorithms.Max,
-                Snippet.BstAlgorithms.Max, Description.BstAlgorithms.Max);
+                Title.BinarySerachTreeAlgorithms.Max,
+                Snippet.BinarySearchTreeAlgorithms.Max, Description.BinarySearchTreeAlgorithms.Max);
             bstAlgorithms.AddChild(bstMax);
 
             IEntity bstMin = new PageEntity(Path.BinarySearchtAlgorithms.Min,
-                Title.BstAlgorithms.Min,
-                Snippet.BstAlgorithms.Min, Description.BstAlgorithms.Min);
+                Title.BinarySerachTreeAlgorithms.Min,
+                Snippet.BinarySearchTreeAlgorithms.Min, Description.BinarySearchTreeAlgorithms.Min);
             bstAlgorithms.AddChild(bstMin);
 
             IEntity bstSearch = new PageEntity(Path.BinarySearchtAlgorithms.Search,
-                Title.BstAlgorithms.Search,
-                Snippet.BstAlgorithms.Search, Description.BstAlgorithms.Search);
+                Title.BinarySerachTreeAlgorithms.Search,
+                Snippet.BinarySearchTreeAlgorithms.Search, Description.BinarySearchTreeAlgorithms.Search);
             bstAlgorithms.AddChild(bstSearch);
 
             IEntity bstSuccessor = new PageEntity(Path.BinarySearchtAlgorithms.Successor,
-                Title.BstAlgorithms.Successor,
-                Snippet.BstAlgorithms.Successor, Description.BstAlgorithms.Successor);
+                Title.BinarySerachTreeAlgorithms.Successor,
+                Snippet.BinarySearchTreeAlgorithms.Successor, Description.BinarySearchTreeAlgorithms.Successor);
             bstAlgorithms.AddChild(bstSuccessor);
 
             IEntity bstTransplant = new PageEntity(Path.BinarySearchtAlgorithms.Transplant,
-                Title.BstAlgorithms.Transplant,
-                Snippet.BstAlgorithms.Transplant, Description.BstAlgorithms.Transplant);
+                Title.BinarySerachTreeAlgorithms.Transplant,
+                Snippet.BinarySearchTreeAlgorithms.Transplant, Description.BinarySearchTreeAlgorithms.Transplant);
             bstAlgorithms.AddChild(bstTransplant);
 
             // heap algorithms

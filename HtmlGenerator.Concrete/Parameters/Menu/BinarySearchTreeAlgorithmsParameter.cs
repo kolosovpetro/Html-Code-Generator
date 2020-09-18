@@ -6,6 +6,6 @@ namespace HtmlGenerator.Concrete.Parameters.Menu
     public class BinarySearchTreeAlgorithmsParameter : IMenuParameter
     {
         public string DirectoryName => Path.BinarySearchtAlgorithms.Root;
-        public string SubTitle => Title.BstAlgorithms.Root;
+        public string SubTitle => Title.BinarySerachTreeAlgorithms.Root;
     }
 }

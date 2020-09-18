@@ -47,7 +47,7 @@
             public const string Depth = "Depth";
         }
 
-        public static class BstAlgorithms
+        public static class BinarySerachTreeAlgorithms
         {
             public const string Root = "Binary Search Tree Algorithms";
             public const string Insert = "BST Insert";

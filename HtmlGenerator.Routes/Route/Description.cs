@@ -55,7 +55,7 @@
             public const string Depth = "Returns depth of current node.";
         }
 
-        public static class BstAlgorithms
+        public static class BinarySearchTreeAlgorithms
         {
             public const string Insert = "Inserts new node to BST and gives pointer to it.";
             public const string Search = "Searches for particular node in BST.";

@@ -91,10 +91,10 @@
             public const string SimpleLinearSearch =
                 "Searches for particular value in integer sequence. Returns true if found, otherwise false.";
 
-            public const string ImproveLinearSearch =
+            public const string ImprovedLinearSearch =
                 "Searches for particular value in integer sequence. Returns true if found, otherwise false.";
 
-            public const string ImproveLinearSearchWithSentinel =
+            public const string ImprovedLinearSearchWithSentinel =
                 "Searches for particular value in integer sequence. Returns true if found, otherwise false.";
 
             public const string BinarySearch =

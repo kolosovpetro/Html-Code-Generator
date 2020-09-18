@@ -4,7 +4,7 @@
     {
         public static class ClassicalAlgorithms
         {
-            public const string SieveSource =
+            public const string SieveOfEratosthenes =
                 Path.MainRoot + "snippet_source/classical_algorithms/sieve_of_eratosthenes.txt";
 
             public const string EuclideanGcd = Path.MainRoot + "snippet_source/classical_algorithms/euclidean_gcd.txt";
@@ -62,10 +62,10 @@
             public const string SimpleLinearSearch =
                 Path.MainRoot + "snippet_source/search_algorithms/simple_linear_search.txt";
 
-            public const string ImproveLinearSearch =
+            public const string ImprovedLinearSearch =
                 Path.MainRoot + "snippet_source/search_algorithms/improved_linear_search.txt";
 
-            public const string ImproveLinearSearchWithSentinel =
+            public const string ImprovedLinearSearchWithSentinel =
                 Path.MainRoot + "snippet_source/search_algorithms/improved_linear_search_with_sentinel.txt";
 
             public const string BinarySearch =
@@ -84,7 +84,7 @@
             public const string Transplant = Path.MainRoot + "snippet_source/tree_algorithms/bst/bst_transplant.txt";
         }
 
-        public static class BtAlgorithms
+        public static class BinaryTreeAlgorithms
         {
             public const string ExpressionTree =
                 Path.MainRoot + "snippet_source/tree_algorithms/bt/expression_tree.txt";

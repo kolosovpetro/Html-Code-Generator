@@ -3,7 +3,17 @@ using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
 using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
+<<<<<<< HEAD
 using HtmlGenerator.Concrete.Parameters.Page.GraphAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
+=======
+using HtmlGenerator.Concrete.Parameters.Page.GraphAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
+>>>>>>> 7946357252483518a3d7a2f631861eb965e9f975
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
@@ -18,61 +28,27 @@ namespace HtmlGenerator.UI
             IEntity root = new MenuEntity(new RootParameter());
 
             // classical algorithms branch
-            IEntity classicalAlgorithms =
-                new MenuEntity(new ClassicalAlgorithmsParameter());
+            IEntity classicalAlgorithms = new MenuEntity(new ClassicalAlgorithmsParameter());
             root.AddChild(classicalAlgorithms);
 
-            IEntity sieveOfEratosthenes = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes,
-                Title.ClassicalAlgorithms.SieveOfEratosthenes,
-                Snippet.ClassicalAlgorithms.SieveSource, Description.ClassicalAlgorithms.SieveOfEratosthenes);
-            classicalAlgorithms.AddChild(sieveOfEratosthenes);
-
-            IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd,
-                Title.ClassicalAlgorithms.EuclideanGcd,
-                Snippet.ClassicalAlgorithms.EuclideanGcd, Description.ClassicalAlgorithms.EuclideanGcd);
-            classicalAlgorithms.AddChild(euclideanGcd);
-
-            IEntity kadaneAlgorithm =
-                new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithms, Title.ClassicalAlgorithms.KadaneAlgorithm,
-                    Snippet.ClassicalAlgorithms.KadaneAlgorithm, Description.ClassicalAlgorithms.KadaneAlgorithm);
-            classicalAlgorithms.AddChild(kadaneAlgorithm);
-
-            IEntity maximumSubarraySum = new PageEntity(Path.ClassicalAlgorithms.MaximumSubarraySum,
-                Title.ClassicalAlgorithms.MaximumSubarraySum,
-                Snippet.ClassicalAlgorithms.MaximumSubarraySum, Description.ClassicalAlgorithms.MaximumSubarraySum);
-            classicalAlgorithms.AddChild(maximumSubarraySum);
-
-            IEntity shuntingYard = new PageEntity(Path.ClassicalAlgorithms.ShuntingYard,
-                Title.ClassicalAlgorithms.ShuntingYard,
-                Snippet.ClassicalAlgorithms.ShuntingYard, Description.ClassicalAlgorithms.ShuntingYard);
-            classicalAlgorithms.AddChild(shuntingYard);
+            IEntity sieveOfEratosthenes = new PageEntity(new SieveOfEratosthenesParameter());
+            IEntity euclideanGcd = new PageEntity(new EuclideanGcdParameter());
+            IEntity kadaneAlgorithm = new PageEntity(new KadaneAlgorithmParameter());
+            IEntity maximumSubarraySum = new PageEntity(new MaximumSubarraySumParameter());
+            IEntity shuntingYard = new PageEntity(new ShuntingYardParameter());
+            classicalAlgorithms.AddChildRange(sieveOfEratosthenes, euclideanGcd, kadaneAlgorithm,
+                maximumSubarraySum, shuntingYard);
 
             // search algorithms branch
             IEntity searchAlgorithms = new MenuEntity(new SearchAlgorithmsParameter());
             root.AddChild(searchAlgorithms);
 
-            IEntity simpleLinearSearch = new PageEntity(Path.SearchAlgorithms.SimpleLinearSearch,
-                Title.SearchAlgorithms.SimpleLinearSearch,
-                Snippet.SearchAlgorithms.SimpleLinearSearch, Description.SearchAlgorithms.SimpleLinearSearch);
-            searchAlgorithms.AddChild(simpleLinearSearch);
-
-            IEntity improvedLinearSearch = new PageEntity(Path.SearchAlgorithms.ImproveLinearSearch,
-                Title.SearchAlgorithms.ImproveLinearSearch,
-                Snippet.SearchAlgorithms.ImproveLinearSearch, Description.SearchAlgorithms.ImproveLinearSearch);
-            searchAlgorithms.AddChild(improvedLinearSearch);
-
-            IEntity improvedLinearSearchWithSentinel = new PageEntity(
-                Path.SearchAlgorithms.ImproveLinearSearchWithSentinel,
-                Title.SearchAlgorithms.ImproveLinearSearchWithSentinel,
-                Snippet.SearchAlgorithms.ImproveLinearSearchWithSentinel,
-                Description.SearchAlgorithms.ImproveLinearSearchWithSentinel);
-            searchAlgorithms.AddChild(improvedLinearSearchWithSentinel);
-
-            IEntity binarySearch = new PageEntity(Path.SearchAlgorithms.BinarySearch,
-                Title.SearchAlgorithms.BinarySearch,
-                Snippet.SearchAlgorithms.BinarySearch, Description.SearchAlgorithms.BinarySearch);
-            searchAlgorithms.AddChild(binarySearch);
-
+            IEntity simpleLinearSearch = new PageEntity(new SimpleLinearSearchParameter());
+            IEntity improvedLinearSearch = new PageEntity(new ImprovedLinearSearchParameter());
+            IEntity improvedLinearSearchWithSentinel = new PageEntity(new ImprovedLinearSearchWithSentinelParameter());
+            IEntity binarySearch = new PageEntity(new BinarySearchParameter());
+            searchAlgorithms.AddChildRange(simpleLinearSearch, improvedLinearSearch, improvedLinearSearchWithSentinel,
+                binarySearch);
 
             // sort algorithms branch
             IEntity sortAlgorithms = new MenuEntity(new SortAlgorithmsParameter());
@@ -113,85 +89,33 @@ namespace HtmlGenerator.UI
             treeAlgorithms.AddChild(binaryTreeAlgorithms);
 
             // concrete binary tree algorithms
-            IEntity expressionTree = new PageEntity(Path.BinaryTreeAlgorithms.ExpressionTree,
-                Title.BtAlgorithms.ExpressionTree,
-                Snippet.BtAlgorithms.ExpressionTree, Description.BinaryTreeAlgorithms.ExpressionTree);
-            binaryTreeAlgorithms.AddChild(expressionTree);
-
-            IEntity breadthFirstTree = new PageEntity(Path.BinaryTreeAlgorithms.BreadthFirstIterative,
-                Title.BtAlgorithms.BreadthFirstIterative,
-                Snippet.BtAlgorithms.BreadthFirstIterative, Description.BinaryTreeAlgorithms.BreadthFirstIterative);
-            binaryTreeAlgorithms.AddChild(breadthFirstTree);
-
-            IEntity inOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.InOrderIterative,
-                Title.BtAlgorithms.InOrderIterative,
-                Snippet.BtAlgorithms.InOrderIterative, Description.BinaryTreeAlgorithms.InOrderIterative);
-            binaryTreeAlgorithms.AddChild(inOrderIterative);
-
-            IEntity inOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.InOrderRecursive,
-                Title.BtAlgorithms.InOrderRecursive,
-                Snippet.BtAlgorithms.InOrderRecursive, Description.BinaryTreeAlgorithms.InOrderRecursive);
-            binaryTreeAlgorithms.AddChild(inOrderRecursive);
-
-            IEntity outOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.OutOrderRecursive,
-                Title.BtAlgorithms.OutOrderRecursive,
-                Snippet.BtAlgorithms.OutOrderRecursive, Description.BinaryTreeAlgorithms.OutOrderRecursive);
-            binaryTreeAlgorithms.AddChild(outOrderRecursive);
-
-            IEntity postOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.PostOrderIterative,
-                Title.BtAlgorithms.PostOrderIterative,
-                Snippet.BtAlgorithms.PostOrderIterative, Description.BinaryTreeAlgorithms.PostOrderIterative);
-            binaryTreeAlgorithms.AddChild(postOrderIterative);
-
-            IEntity postOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.PostOrderRecursive,
-                Title.BtAlgorithms.PostOrderRecursive,
-                Snippet.BtAlgorithms.PostOrderRecursive, Description.BinaryTreeAlgorithms.PostOrderRecursive);
-            binaryTreeAlgorithms.AddChild(postOrderRecursive);
-
-            IEntity preOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.PreOrderIterative,
-                Title.BtAlgorithms.PreOrderIterative,
-                Snippet.BtAlgorithms.PreOrderIterative, Description.BinaryTreeAlgorithms.PreOrderIterative);
-            binaryTreeAlgorithms.AddChild(preOrderIterative);
-
-            IEntity preOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.PreOrderRecursive,
-                Title.BtAlgorithms.PreOrderRecursive,
-                Snippet.BtAlgorithms.PreOrderRecursive, Description.BinaryTreeAlgorithms.PreOrderRecursive);
-            binaryTreeAlgorithms.AddChild(preOrderRecursive);
-
-            IEntity btDepth = new PageEntity(Path.BinaryTreeAlgorithms.Depth,
-                Title.BtAlgorithms.Depth,
-                Snippet.BtAlgorithms.Depth, Description.BinaryTreeAlgorithms.Depth);
-            binaryTreeAlgorithms.AddChild(btDepth);
-
-            IEntity btHeight = new PageEntity(Path.BinaryTreeAlgorithms.Height,
-                Title.BtAlgorithms.Height,
-                Snippet.BtAlgorithms.Height, Description.BinaryTreeAlgorithms.Height);
-            binaryTreeAlgorithms.AddChild(btHeight);
+            IEntity expressionTree = new PageEntity(new BinaryExpressionTreeParameter());
+            IEntity breadthFirstTree = new PageEntity(new BinaryTreeBreadthFirstSearchParameter());
+            IEntity inOrderIterative = new PageEntity(new BinaryTreeInOrderIterativeParameter());
+            IEntity inOrderRecursive = new PageEntity(new BinaryTreeInOrderRecursiveParameter());
+            IEntity outOrderRecursive = new PageEntity(new BinaryTreeOutOrderRecursiveParameter());
+            IEntity postOrderIterative = new PageEntity(new BinaryTreePostOrderIterativeParameter());
+            IEntity postOrderRecursive = new PageEntity(new BinaryTreePostOrderRecursiveParameter());
+            IEntity preOrderIterative = new PageEntity(new BinaryTreePreOrderIterativeParameter());
+            IEntity preOrderRecursive = new PageEntity(new BinaryTreePreOrderRecursiveParameter());
+            IEntity btDepth = new PageEntity(new BinaryTreeDepthParameter());
+            IEntity btHeight = new PageEntity(new BinaryTreeHeightParameter());
+            binaryTreeAlgorithms.AddChildRange(expressionTree, breadthFirstTree, inOrderIterative,
+                inOrderRecursive, outOrderRecursive, postOrderIterative, postOrderRecursive, preOrderIterative,
+                preOrderRecursive, btDepth, btHeight
+            );
 
             // binary search tree algorithms
             IEntity bstAlgorithms = new MenuEntity(new BinarySearchTreeAlgorithmsParameter());
-            treeAlgorithms.AddChild(bstAlgorithms);
-
             IEntity bstInsert = new PageEntity(new BinarySearchTreeInsertParameter());
-            bstAlgorithms.AddChild(bstInsert);
-
             IEntity bstDelete = new PageEntity(new BinarySearchTreeDeleteParameter());
-            bstAlgorithms.AddChild(bstDelete);
-
             IEntity bstMax = new PageEntity(new BinarySearchTreeMaxParameter());
-            bstAlgorithms.AddChild(bstMax);
-
             IEntity bstMin = new PageEntity(new BinarySearchTreeMinParameter());
-            bstAlgorithms.AddChild(bstMin);
-
             IEntity bstSearch = new PageEntity(new BinarySearchTreeSearchParameter());
-            bstAlgorithms.AddChild(bstSearch);
-
             IEntity bstSuccessor = new PageEntity(new BinarySearchTreeSuccessorParameter());
-            bstAlgorithms.AddChild(bstSuccessor);
-
             IEntity bstTransplant = new PageEntity(new BinarySearchTreeTransplantParameter());
-            bstAlgorithms.AddChild(bstTransplant);
+            bstAlgorithms.AddChildRange(bstInsert, bstDelete, bstMax, bstMin, bstSearch,
+                bstSuccessor, bstTransplant);
 
             // heap algorithms
             IEntity heapAlgorithms = new MenuEntity(new HeapAlgorithmsParameter());

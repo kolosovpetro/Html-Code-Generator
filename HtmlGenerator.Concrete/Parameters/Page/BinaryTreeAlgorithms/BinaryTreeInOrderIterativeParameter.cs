@@ -3,7 +3,7 @@ using HtmlGenerator.Routes.Route;
 
 namespace HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms
 {
-    public class BinaryTreeInOrderIterative : IPageParameter
+    public class BinaryTreeInOrderIterativeParameter : IPageParameter
     {
         public string DirectoryName => Path.BinaryTreeAlgorithms.InOrderIterative;
         public string SubTitle => Path.BinaryTreeAlgorithms.InOrderIterative;

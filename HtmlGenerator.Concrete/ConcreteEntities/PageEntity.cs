@@ -26,6 +26,15 @@ namespace HtmlGenerator.Concrete.ConcreteEntities
             Title = subTitle;
         }
 
+        public PageEntity(IPageParameter parameter)
+        {
+            SnippetPath = parameter.SnippetPath;
+            DirectoryName = parameter.DirectoryName;
+            SubTitle = parameter.SubTitle;
+            Description = parameter.Description;
+            Title = parameter.SubTitle;
+        }
+
         public void AddChild(IEntity entity)
         {
             ChildObjects.Add(entity);

@@ -18,13 +18,12 @@ namespace HtmlGenerator.UI
             IEntity root = new MenuEntity(new RootParameter());
 
             // classical algorithms branch
-            IEntity classicalAlgorithms =
-                new MenuEntity(new ClassicalAlgorithmsParameter());
+            IEntity classicalAlgorithms = new MenuEntity(new ClassicalAlgorithmsParameter());
             root.AddChild(classicalAlgorithms);
 
             IEntity sieveOfEratosthenes = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes,
                 Title.ClassicalAlgorithms.SieveOfEratosthenes,
-                Snippet.ClassicalAlgorithms.SieveSource, Description.ClassicalAlgorithms.SieveOfEratosthenes);
+                Snippet.ClassicalAlgorithms.SieveOfEratosthenes, Description.ClassicalAlgorithms.SieveOfEratosthenes);
             classicalAlgorithms.AddChild(sieveOfEratosthenes);
 
             IEntity euclideanGcd = new PageEntity(Path.ClassicalAlgorithms.EuclideanGcd,
@@ -33,7 +32,7 @@ namespace HtmlGenerator.UI
             classicalAlgorithms.AddChild(euclideanGcd);
 
             IEntity kadaneAlgorithm =
-                new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithms, Title.ClassicalAlgorithms.KadaneAlgorithm,
+                new PageEntity(Path.ClassicalAlgorithms.KadaneAlgorithm, Title.ClassicalAlgorithms.KadaneAlgorithm,
                     Snippet.ClassicalAlgorithms.KadaneAlgorithm, Description.ClassicalAlgorithms.KadaneAlgorithm);
             classicalAlgorithms.AddChild(kadaneAlgorithm);
 

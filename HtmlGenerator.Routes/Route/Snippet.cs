@@ -4,7 +4,7 @@
     {
         public static class ClassicalAlgorithms
         {
-            public const string SieveSource =
+            public const string SieveOfEratosthenes =
                 Path.MainRoot + "snippet_source/classical_algorithms/sieve_of_eratosthenes.txt";
 
             public const string EuclideanGcd = Path.MainRoot + "snippet_source/classical_algorithms/euclidean_gcd.txt";

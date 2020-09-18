@@ -29,6 +29,15 @@ Every algorithm present on the site may be found in respected repository:
 - ~~Add algorithm source link to github~~ (done)
 - ~~Add Search Algorithms~~ (done)
 - Add Data Structures, very simple and short implementations
+  - Add Vector
+  - Add Queue via Linked List
+  - Add Stack via Linked List
+  - Add Stack via Array
+  - Add Queue via Array
+  - Add Binary tree
+  - Add BST
+  - Add Graph via adjacency matrix
+  - Add Graph via adjacency list
 - Add Design Patterns, very simple and short implementations
 - Add required keywords for SEO
 - Modify title in order to be SEO friendly

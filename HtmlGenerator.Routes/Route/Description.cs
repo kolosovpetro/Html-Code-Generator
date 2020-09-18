@@ -30,7 +30,7 @@
             public const string HeapSort = "Advanced sort algorithm. Complexity: O(nlogn).";
         }
 
-        public static class BtAlgorithms
+        public static class BinaryTreeAlgorithms
         {
             public const string ExpressionTree =
                 "Builds expression tree. Used in augmented calculators and compilers.";

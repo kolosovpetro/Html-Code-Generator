@@ -114,57 +114,57 @@ namespace HtmlGenerator.UI
             // concrete binary tree algorithms
             IEntity expressionTree = new PageEntity(Path.BinaryTreeAlgorithms.ExpressionTree,
                 Title.BtAlgorithms.ExpressionTree,
-                Snippet.BtAlgorithms.ExpressionTree, Description.BtAlgorithms.ExpressionTree);
+                Snippet.BtAlgorithms.ExpressionTree, Description.BinaryTreeAlgorithms.ExpressionTree);
             binaryTreeAlgorithms.AddChild(expressionTree);
 
             IEntity breadthFirstTree = new PageEntity(Path.BinaryTreeAlgorithms.BreadthFirstIterative,
                 Title.BtAlgorithms.BreadthFirstIterative,
-                Snippet.BtAlgorithms.BreadthFirstIterative, Description.BtAlgorithms.BreadthFirstIterative);
+                Snippet.BtAlgorithms.BreadthFirstIterative, Description.BinaryTreeAlgorithms.BreadthFirstIterative);
             binaryTreeAlgorithms.AddChild(breadthFirstTree);
 
             IEntity inOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.InOrderIterative,
                 Title.BtAlgorithms.InOrderIterative,
-                Snippet.BtAlgorithms.InOrderIterative, Description.BtAlgorithms.InOrderIterative);
+                Snippet.BtAlgorithms.InOrderIterative, Description.BinaryTreeAlgorithms.InOrderIterative);
             binaryTreeAlgorithms.AddChild(inOrderIterative);
 
             IEntity inOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.InOrderRecursive,
                 Title.BtAlgorithms.InOrderRecursive,
-                Snippet.BtAlgorithms.InOrderRecursive, Description.BtAlgorithms.InOrderRecursive);
+                Snippet.BtAlgorithms.InOrderRecursive, Description.BinaryTreeAlgorithms.InOrderRecursive);
             binaryTreeAlgorithms.AddChild(inOrderRecursive);
 
             IEntity outOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.OutOrderRecursive,
                 Title.BtAlgorithms.OutOrderRecursive,
-                Snippet.BtAlgorithms.OutOrderRecursive, Description.BtAlgorithms.OutOrderRecursive);
+                Snippet.BtAlgorithms.OutOrderRecursive, Description.BinaryTreeAlgorithms.OutOrderRecursive);
             binaryTreeAlgorithms.AddChild(outOrderRecursive);
 
             IEntity postOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.PostOrderIterative,
                 Title.BtAlgorithms.PostOrderIterative,
-                Snippet.BtAlgorithms.PostOrderIterative, Description.BtAlgorithms.PostOrderIterative);
+                Snippet.BtAlgorithms.PostOrderIterative, Description.BinaryTreeAlgorithms.PostOrderIterative);
             binaryTreeAlgorithms.AddChild(postOrderIterative);
 
             IEntity postOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.PostOrderRecursive,
                 Title.BtAlgorithms.PostOrderRecursive,
-                Snippet.BtAlgorithms.PostOrderRecursive, Description.BtAlgorithms.PostOrderRecursive);
+                Snippet.BtAlgorithms.PostOrderRecursive, Description.BinaryTreeAlgorithms.PostOrderRecursive);
             binaryTreeAlgorithms.AddChild(postOrderRecursive);
 
             IEntity preOrderIterative = new PageEntity(Path.BinaryTreeAlgorithms.PreOrderIterative,
                 Title.BtAlgorithms.PreOrderIterative,
-                Snippet.BtAlgorithms.PreOrderIterative, Description.BtAlgorithms.PreOrderIterative);
+                Snippet.BtAlgorithms.PreOrderIterative, Description.BinaryTreeAlgorithms.PreOrderIterative);
             binaryTreeAlgorithms.AddChild(preOrderIterative);
 
             IEntity preOrderRecursive = new PageEntity(Path.BinaryTreeAlgorithms.PreOrderRecursive,
                 Title.BtAlgorithms.PreOrderRecursive,
-                Snippet.BtAlgorithms.PreOrderRecursive, Description.BtAlgorithms.PreOrderRecursive);
+                Snippet.BtAlgorithms.PreOrderRecursive, Description.BinaryTreeAlgorithms.PreOrderRecursive);
             binaryTreeAlgorithms.AddChild(preOrderRecursive);
 
             IEntity btDepth = new PageEntity(Path.BinaryTreeAlgorithms.Depth,
                 Title.BtAlgorithms.Depth,
-                Snippet.BtAlgorithms.Depth, Description.BtAlgorithms.Depth);
+                Snippet.BtAlgorithms.Depth, Description.BinaryTreeAlgorithms.Depth);
             binaryTreeAlgorithms.AddChild(btDepth);
 
             IEntity btHeight = new PageEntity(Path.BinaryTreeAlgorithms.Height,
                 Title.BtAlgorithms.Height,
-                Snippet.BtAlgorithms.Height, Description.BtAlgorithms.Height);
+                Snippet.BtAlgorithms.Height, Description.BinaryTreeAlgorithms.Height);
             binaryTreeAlgorithms.AddChild(btHeight);
 
             // binary search tree algorithms

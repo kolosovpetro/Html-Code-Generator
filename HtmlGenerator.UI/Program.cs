@@ -17,7 +17,7 @@ namespace HtmlGenerator.UI
 
             // classical algorithms branch
             IEntity classicalAlgorithms =
-                new MenuEntity(Path.ClassicalAlgorithms.Root, Title.ClassicalAlgorithms.Root);
+                new MenuEntity(new ClassicalAlgorithmsParameter());
             root.AddChild(classicalAlgorithms);
 
             IEntity sieveOfEratosthenes = new PageEntity(Path.ClassicalAlgorithms.SieveOfEratosthenes,
@@ -46,7 +46,7 @@ namespace HtmlGenerator.UI
             classicalAlgorithms.AddChild(shuntingYard);
 
             // search algorithms branch
-            IEntity searchAlgorithms = new MenuEntity(Path.SearchAlgorithms.Root, Title.SearchAlgorithms.Root);
+            IEntity searchAlgorithms = new MenuEntity(new SearchAlgorithmsParameter());
             root.AddChild(searchAlgorithms);
 
             IEntity simpleLinearSearch = new PageEntity(Path.SearchAlgorithms.SimpleLinearSearch,
@@ -73,7 +73,7 @@ namespace HtmlGenerator.UI
 
 
             // sort algorithms branch
-            IEntity sortAlgorithms = new MenuEntity(Path.SortAlgorithms.Root, Title.SortAlgorithms.Root);
+            IEntity sortAlgorithms = new MenuEntity(new SortAlgorithmsParameter());
             root.AddChild(sortAlgorithms);
 
             IEntity bubbleSort = new PageEntity(Path.SortAlgorithms.BubbleSort, Title.SortAlgorithms.BubbleSort,
@@ -103,11 +103,11 @@ namespace HtmlGenerator.UI
             sortAlgorithms.AddChild(selectionSort);
 
             // tree algorithms
-            IEntity treeAlgorithms = new MenuEntity(Path.TreeAlgorithms.Root, Title.TreeAlgorithms.Root);
+            IEntity treeAlgorithms = new MenuEntity(new TreeAlgorithmsParameter());
             root.AddChild(treeAlgorithms);
 
             // binary tree algorithms
-            IEntity binaryTreeAlgorithms = new MenuEntity(Path.BinaryTreeAlgorithms.Root, Title.BtAlgorithms.Root);
+            IEntity binaryTreeAlgorithms = new MenuEntity(new BinaryTreeAlgorithmsParameter());
             treeAlgorithms.AddChild(binaryTreeAlgorithms);
 
             // concrete binary tree algorithms
@@ -167,7 +167,7 @@ namespace HtmlGenerator.UI
             binaryTreeAlgorithms.AddChild(btHeight);
 
             // binary search tree algorithms
-            IEntity bstAlgorithms = new MenuEntity(Path.BinarySearchtAlgorithms.Root, Title.BstAlgorithms.Root);
+            IEntity bstAlgorithms = new MenuEntity(new BinarySearchTreeAlgorithmsParameter());
             treeAlgorithms.AddChild(bstAlgorithms);
 
             IEntity bstInsert = new PageEntity(Path.BinarySearchtAlgorithms.Insert,
@@ -206,7 +206,7 @@ namespace HtmlGenerator.UI
             bstAlgorithms.AddChild(bstTransplant);
 
             // heap algorithms
-            IEntity heapAlgorithms = new MenuEntity(Path.HeapAlgorithms.Root, Title.HeapAlgorithms.Root);
+            IEntity heapAlgorithms = new MenuEntity(new HeapAlgorithmsParameter());
             treeAlgorithms.AddChild(heapAlgorithms);
 
             IEntity heapPush = new PageEntity(Path.HeapAlgorithms.HeapPush,
@@ -240,7 +240,7 @@ namespace HtmlGenerator.UI
             heapAlgorithms.AddChild(heapSort);
 
             // graph algorithms
-            IEntity graphAlgorithms = new MenuEntity(Path.GraphAlgorithms.Root, Title.GraphAlgorithms.Root);
+            IEntity graphAlgorithms = new MenuEntity(new GraphAlgorithmsParameter());
             root.AddChild(graphAlgorithms);
 
             IEntity graphBreadthFirst = new PageEntity(Path.GraphAlgorithms.BreadthFirst,

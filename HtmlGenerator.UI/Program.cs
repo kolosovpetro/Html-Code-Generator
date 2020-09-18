@@ -3,10 +3,12 @@ using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Concrete.ConcreteEntities;
 using HtmlGenerator.Concrete.Parameters.Menu;
 using HtmlGenerator.Concrete.Parameters.Page.BinarySearchTreeAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.GraphAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.BinaryTreeAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.ClassicalAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.HeapAlgorithms;
 using HtmlGenerator.Concrete.Parameters.Page.SearchAlgorithms;
+using HtmlGenerator.Concrete.Parameters.Page.SortAlgorithms;
 using HtmlGenerator.Routes.Route;
 using HtmlGenerator.Services.Concrete;
 using Path = HtmlGenerator.Routes.Route.Path;
@@ -47,31 +49,13 @@ namespace HtmlGenerator.UI
             IEntity sortAlgorithms = new MenuEntity(new SortAlgorithmsParameter());
             root.AddChild(sortAlgorithms);
 
-            IEntity bubbleSort = new PageEntity(Path.SortAlgorithms.BubbleSort, Title.SortAlgorithms.BubbleSort,
-                Snippet.SortAlgorithms.BubbleSort, Description.SortAlgorithms.BubbleSort);
-            sortAlgorithms.AddChild(bubbleSort);
-
-            IEntity cocktailSort = new PageEntity(Path.SortAlgorithms.CocktailSort, Title.SortAlgorithms.CocktailSort,
-                Snippet.SortAlgorithms.CocktailSort, Description.SortAlgorithms.CocktailSort);
-            sortAlgorithms.AddChild(cocktailSort);
-
-            IEntity insertionSort = new PageEntity(Path.SortAlgorithms.InsertionSort,
-                Title.SortAlgorithms.InsertionSort,
-                Snippet.SortAlgorithms.InsertionSort, Description.SortAlgorithms.InsertionSort);
-            sortAlgorithms.AddChild(insertionSort);
-
-            IEntity mergeSort = new PageEntity(Path.SortAlgorithms.MergeSort, Title.SortAlgorithms.MergeSort,
-                Snippet.SortAlgorithms.MergeSort, Description.SortAlgorithms.MergeSort);
-            sortAlgorithms.AddChild(mergeSort);
-
-            IEntity quickSort = new PageEntity(Path.SortAlgorithms.QuickSort, Title.SortAlgorithms.QuickSort,
-                Snippet.SortAlgorithms.QuickSort, Description.SortAlgorithms.QuickSort);
-            sortAlgorithms.AddChild(quickSort);
-
-            IEntity selectionSort = new PageEntity(Path.SortAlgorithms.SelectionSort,
-                Title.SortAlgorithms.SelectionSort,
-                Snippet.SortAlgorithms.SelectionSort, Description.SortAlgorithms.SelectionSort);
-            sortAlgorithms.AddChild(selectionSort);
+            IEntity bubbleSort = new PageEntity(new BubbleSorParameter());
+            IEntity cocktailSort = new PageEntity(new CocktailSortParameter());
+            IEntity insertionSort = new PageEntity(new InsertationSortParameter());
+            IEntity mergeSort = new PageEntity(new MergeSortParameter());
+            IEntity quickSort = new PageEntity(new QuickSortParameter());
+            IEntity selectionSort = new PageEntity(new SelectionSortParameter());
+            sortAlgorithms.AddChildRange(bubbleSort, cocktailSort, insertionSort, mergeSort, quickSort, selectionSort);
 
             // tree algorithms
             IEntity treeAlgorithms = new MenuEntity(new TreeAlgorithmsParameter());
@@ -127,31 +111,12 @@ namespace HtmlGenerator.UI
             IEntity graphAlgorithms = new MenuEntity(new GraphAlgorithmsParameter());
             root.AddChild(graphAlgorithms);
 
-            IEntity graphBreadthFirst = new PageEntity(Path.GraphAlgorithms.BreadthFirst,
-                Title.GraphAlgorithms.BreadthFirst,
-                Snippet.GraphAlgorithms.BreadthFirst, Description.GraphAlgorithms.BreadthFirst);
-            graphAlgorithms.AddChild(graphBreadthFirst);
-
-            IEntity graphDepthFirstIterative = new PageEntity(Path.GraphAlgorithms.DepthFirstIterative,
-                Title.GraphAlgorithms.DepthFirstIterative,
-                Snippet.GraphAlgorithms.DepthFirstIterative, Description.GraphAlgorithms.DepthFirstIterative);
-            graphAlgorithms.AddChild(graphDepthFirstIterative);
-
-            IEntity graphDepthFirstRecursive = new PageEntity(Path.GraphAlgorithms.DepthFirstRecursive,
-                Title.GraphAlgorithms.DepthFirstRecursive,
-                Snippet.GraphAlgorithms.DepthFirstRecursive, Description.GraphAlgorithms.DepthFirstRecursive);
-            graphAlgorithms.AddChild(graphDepthFirstRecursive);
-
-            IEntity dijkstraAlgorithm = new PageEntity(Path.GraphAlgorithms.DijkstraAlgorithm,
-                Title.GraphAlgorithms.DijkstraAlgorithm,
-                Snippet.GraphAlgorithms.DijkstraAlgorithm, Description.GraphAlgorithms.DijkstraAlgorithm);
-            graphAlgorithms.AddChild(dijkstraAlgorithm);
-
-            IEntity kahnAlgorithm = new PageEntity(Path.GraphAlgorithms.KahnAlgorithm,
-                Title.GraphAlgorithms.KahnAlgorithm,
-                Snippet.GraphAlgorithms.KahnAlgorithm, Description.GraphAlgorithms.KahnAlgorithm);
-            graphAlgorithms.AddChild(kahnAlgorithm);
-
+            IEntity graphBreadthFirst = new PageEntity(new GraphBreadthFirstParameter());
+            IEntity graphDepthFirstIterative = new PageEntity(new GraphDepthFirstIterativeParameter());
+            IEntity graphDepthFirstRecursive = new PageEntity(new GraphDepthFirstRecursiveParameter());
+            IEntity dijkstraAlgorithm = new PageEntity(new GraphDijkstraAlgorithmParameter());
+            IEntity kahnAlgorithm = new PageEntity(new GraphKahnAlgorithmParameter());
+            graphAlgorithms.AddChildRange(graphBreadthFirst, graphDepthFirstIterative, graphDepthFirstRecursive, dijkstraAlgorithm, kahnAlgorithm);
             ConcreteService.CreateFiles(root);
             Console.WriteLine("Folders are created");
         }

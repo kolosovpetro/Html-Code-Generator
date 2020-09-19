@@ -82,6 +82,7 @@ namespace HtmlGenerator.UI
 
             // binary search tree algorithms
             IEntity bstAlgorithms = new MenuEntity(new BinarySearchTreeAlgorithmsParameter());
+            treeAlgorithms.AddChild(bstAlgorithms);
             IEntity bstInsert = new PageEntity(new BinarySearchTreeInsertParameter());
             IEntity bstDelete = new PageEntity(new BinarySearchTreeDeleteParameter());
             IEntity bstMax = new PageEntity(new BinarySearchTreeMaxParameter());

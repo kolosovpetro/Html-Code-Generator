@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace HtmlGenerator.Presets.Presets
+namespace HtmlGenerator.Presets.HtmlCodePresets
 {
     public static class CodeSnippet
     {

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using HtmlGenerator.Abstractions.Interfaces;
 using HtmlGenerator.Routes.Route;
 
-namespace HtmlGenerator.Presets.Presets
+namespace HtmlGenerator.Presets.HtmlCodePresets
 {
     public static class Body
     {

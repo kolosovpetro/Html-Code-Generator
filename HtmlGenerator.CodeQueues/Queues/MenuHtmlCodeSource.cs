@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HtmlGenerator.Abstractions.Interfaces;
-using HtmlGenerator.Presets.Presets;
+using HtmlGenerator.Presets.HtmlCodePresets;
 
 namespace HtmlGenerator.CodeQueues.Queues
 {
-    public static class MenuHtml
+    public static class MenuHtmlCodeSource
     {
         public static Queue<string> MenuHtmlCodeQueue(IEntity entity)
         {

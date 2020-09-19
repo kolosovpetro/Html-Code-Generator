@@ -9,7 +9,7 @@ namespace HtmlGenerator.Services.Writer
     {
         public static void CreateMenuItem(IEntity entity)
         {
-            var queue = MenuHtml.MenuHtmlCodeQueue(entity);
+            var queue = MenuHtmlCodeSource.MenuHtmlCodeQueue(entity);
             using var sw = new StreamWriter(entity.Path + entity.FileName);
             
             while (queue.Any()) 
@@ -18,7 +18,7 @@ namespace HtmlGenerator.Services.Writer
         
         public static void CreatePageItem(IEntity entity, string snippetPath)
         {
-            var queue = PageHtml.PageHtmlCodeQueue(entity, snippetPath);
+            var queue = PageHtmlCodeSource.PageHtmlCodeQueue(entity, snippetPath);
             using var sw = new StreamWriter(entity.Path + entity.FileName);
             
             while (queue.Any()) 
@@ -27,7 +27,7 @@ namespace HtmlGenerator.Services.Writer
         
         public static void CreatePageItem(IEntity entity, string snippetPath, string description)
         {
-            var queue = PageHtml.PageHtmlCodeQueue(entity, snippetPath, description);
+            var queue = PageHtmlCodeSource.PageHtmlCodeQueue(entity, snippetPath, description);
             using var sw = new StreamWriter(entity.Path + entity.FileName);
             
             while (queue.Any()) 

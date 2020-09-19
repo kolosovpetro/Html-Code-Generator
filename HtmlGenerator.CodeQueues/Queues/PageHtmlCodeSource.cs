@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HtmlGenerator.Abstractions.Interfaces;
-using HtmlGenerator.Presets.Presets;
+using HtmlGenerator.Presets.HtmlCodePresets;
 
 namespace HtmlGenerator.CodeQueues.Queues
 {
-    public static class PageHtml
+    public static class PageHtmlCodeSource
     {
         public static Queue<string> PageHtmlCodeQueue(IEntity entity, string snippetPath)
         {

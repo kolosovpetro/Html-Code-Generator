@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using FluentAssertions;
-using HtmlGenerator.Presets.Presets;
+using HtmlGenerator.Presets.HtmlCodePresets;
 using NUnit.Framework;
 
 namespace HtmlGenerator.Concrete.Tests.Tests
